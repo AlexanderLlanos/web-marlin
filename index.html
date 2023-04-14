@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="h-full">
+  <head>
+    <meta charset="UTF-8">
+    <title>Marlin Adventures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    .banner-home {
+      background-image: url(./img/banner-home.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 608px;
+    }
+  </style>
+  <body>
+    <section class="banner-home">
+      <header class="lg:w-[1024px] mx-auto">
+        <div class="flex items-center justify-between pt-8">
+          <div>
+            <img src="./img/logo.svg" alt="">
+          </div>
+          <nav class="flex items-center gap-6">
+            <ul class="flex items-center gap-6 text-white font-bold text-[18px]">
+              <li>
+                <a href="">Inicio</a>
+              </li>
+              <li>
+                <a href="">Sobre nosotros</a>
+              </li>
+              <li>
+                <a href="">Tours guiados</a>
+              </li>
+              <li>
+                <a href="">Paquetes y promociones</a>
+              </li>
+            </ul>
+            <div class="flex items-center gap-2">
+              <a href="">
+                <img src="./img/en.svg" alt="">
+              </a>
+              <a href="">
+                <img src="./img/es.svg" alt="">
+              </a>
+              <button class="bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]">Contáctanos</button>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="lg:w-[1024px] mx-auto">
+        <div class="flex items-center justify-center flex-col h-[505px]">
+          <img src="./img/banner-text.svg" alt="">
+          <button class="bg-white py-[8px] px-[31px] rounded-full font-bold text-[#12215A] text-[15px] mt-[60px]">¡Ver más paquetes y promociones!</button>
+        </div>
+      </div>
+    </section>
+    <section class="lg:w-[1024px] mx-auto">
+      <div class="bg-[url('./img/box-descuento.jpg')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative">
+        <div class="absolute bg-[url('./img/box-descuento-bg.png')] bg-cover h-[199px] w-full bottom-0 rounded-[17px]">
+          <div class="flex items-end h-full gap-10 pb-[30px]">
+            <div class="flex items-center justify-center w-full">
+              <div class="relative text-white font-bold">
+                <span class="text-[26px]">S/</span>
+                <span class="text-[60px] leading-none">00.</span>
+                <span class="text-[20px] leading-none">00</span>
+                <p class="absolute top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">Desde</p>
+                <p class="absolute bottom-[-16px] text-[11px] font-normal text-[#12215A] right-[20px]">por persona</p>
+              </div>
+            </div>
+            <div class="w-full text-center">
+              <p class="text-[#12215A] font-bold text-[21px] leading-none">Rorem ipsum dolor + libero et velit interdu</p>
+              <p class="text-[#12215A] font-light text-[30px]">Lorem ipsum details</p>
+            </div>
+            <div class="flex flex-col items-end justify-end w-full">
+              <div class="bg-[url('./img/descuento.svg')] w-[262px] flex justify-end mb-[20px]">
+                <p class="text-white font-bold text-[36px] pr-[20px]">Descuento</p>
+              </div>
+              <button class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] text-[21px] mr-[20px]">RESERVAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="border-b-[30px] border-[#11CCC7] mt-10">
+      <div class="lg:w-[1024px] mx-auto border-t-[3px] border-[#12215A]">
+        <div class="flex items-center py-[30px]">
+          <div class="w-[35%] justify-center flex-col flex items-center">
+            <img src="./img/logo-color.svg" alt="">
+            <div class="flex items-center justify-between pt-6 w-[120px]">
+              <a href="">
+                <img src="./img/fb.svg" alt="">
+              </a>
+              <a href="">
+                <img src="./img/inst.svg" alt="">
+              </a>
+              <a href="">
+                <img src="./img/wsp.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="w-[75%]">
+            <div class="flex gap-10">
+              <div class="flex flex-col text-[18px] w-full">
+                <h3 class="text-[#00B2E4] font-bold">Inicio</h3>
+                <a class="text-[#12215A]" href="">Sobre nosotros</a>
+                <a class="text-[#12215A]" href="">Tours guiados</a>
+                <a class="text-[#12215A]" href="">Paquetes y promociones</a>
+                <a class="text-[#12215A]" href="">Contáctanos</a>
+              </div>
+              <div class="flex flex-col w-full">
+                <div class="flex flex-col">
+                  <h3 class="text-[#00B2E4] font-bold">Oficina</h3>
+                  <p>PJ A00 S/N</p>
+                  <p>Barrio industrial - Máncora</p>
+                </div>
+                <div class="flex flex-col">
+                  <h3 class="text-[#00B2E4] font-bold">Reservas</h3>
+                  <p>957 561 266</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+  </body>
+</html>

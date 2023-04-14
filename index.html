@@ -1,10 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="h-full">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Marlin Adventures</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
   <style>
     .banner-home {
@@ -14,16 +18,72 @@
       background-size: cover;
       height: 608px;
     }
+
+    .nav {
+      display: flex;
+    }
+
+    @media (max-width: 769px) {
+      .nav {
+        display: none;
+      }
+
+      .nav.active {
+        display: block;
+        position: fixed;
+        background: white;
+        width: 300px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        padding: 15px;
+      }
+    }
   </style>
   <body>
-    <section class="banner-home">
-      <header class="lg:w-[1024px] mx-auto">
+    <section class="banner-home rounded-b-[20px]">
+      <header class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
         <div class="flex items-center justify-between pt-8">
           <div>
-            <img src="./img/logo.svg" alt="">
+            <img src="./img/logo.svg" alt="" />
           </div>
-          <nav class="flex items-center gap-6">
-            <ul class="flex items-center gap-6 text-white font-bold text-[18px]">
+          <div class="lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 stroke-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+          <nav class="nav items-center gap-6">
+            <div class="flex lg:hidden items-end justify-end mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="stroke-[#12215A] w-8 h-8 stroke-2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </div>
+            <ul
+              class="flex flex-col lg:flex-row lg:items-center gap-6 text-[#12215A] lg:text-white font-bold text-[18px]"
+            >
               <li>
                 <a href="">Inicio</a>
               </li>
@@ -37,70 +97,425 @@
                 <a href="">Paquetes y promociones</a>
               </li>
             </ul>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 mt-10 lg:mt-0">
               <a href="">
-                <img src="./img/en.svg" alt="">
+                <img src="./img/en.svg" alt="" />
               </a>
               <a href="">
-                <img src="./img/es.svg" alt="">
+                <img src="./img/es.svg" alt="" />
               </a>
-              <button class="bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]">Contáctanos</button>
+              <button
+                class="bg-[#11CCC7] lg:bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]"
+              >
+                Contáctanos
+              </button>
             </div>
           </nav>
         </div>
       </header>
-      <div class="lg:w-[1024px] mx-auto">
+      <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
         <div class="flex items-center justify-center flex-col h-[505px]">
-          <img src="./img/banner-text.svg" alt="">
-          <button class="bg-white py-[8px] px-[31px] rounded-full font-bold text-[#12215A] text-[15px] mt-[60px]">¡Ver más paquetes y promociones!</button>
+          <img src="./img/banner-text.svg" alt="" />
+          <button
+            class="bg-white py-[8px] px-[31px] rounded-full font-bold text-[#12215A] text-[15px] mt-[60px]"
+          >
+            ¡Ver más paquetes y promociones!
+          </button>
         </div>
       </div>
     </section>
-    <section class="lg:w-[1024px] mx-auto">
-      <div class="bg-[url('./img/box-descuento.jpg')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative">
-        <div class="absolute bg-[url('./img/box-descuento-bg.png')] bg-cover h-[199px] w-full bottom-0 rounded-[17px]">
-          <div class="flex items-end h-full gap-10 pb-[30px]">
+    <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+      <div
+        class="bg-[url('./img/box-descuento.jpg')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
+      >
+        <div
+          class="absolute bg-[url('./img/box-descuento-bg-mobile.png')] md:bg-[url('./img/box-descuento-bg.png')] bg-cover h-[280px] md:h-[199px] w-full bottom-0 rounded-[17px]"
+        >
+          <div
+            class="flex flex-col md:flex-row items-end h-full gap-4 justify-end md:gap-10 pb-[15px] md:pb-[30px]"
+          >
             <div class="flex items-center justify-center w-full">
               <div class="relative text-white font-bold">
                 <span class="text-[26px]">S/</span>
                 <span class="text-[60px] leading-none">00.</span>
                 <span class="text-[20px] leading-none">00</span>
-                <p class="absolute top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">Desde</p>
-                <p class="absolute bottom-[-16px] text-[11px] font-normal text-[#12215A] right-[20px]">por persona</p>
+                <p
+                  class="absolute top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
+                >
+                  Desde
+                </p>
+                <p
+                  class="absolute bottom-[-16px] text-[11px] font-normal text-[#12215A] right-[20px]"
+                >
+                  por persona
+                </p>
               </div>
             </div>
-            <div class="w-full text-center">
-              <p class="text-[#12215A] font-bold text-[21px] leading-none">Rorem ipsum dolor + libero et velit interdu</p>
-              <p class="text-[#12215A] font-light text-[30px]">Lorem ipsum details</p>
+            <div class="w-full text-center mt-[10px] md:mt-0">
+              <p
+                class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none"
+              >
+                Rorem ipsum dolor + libero et velit interdu
+              </p>
+              <p
+                class="text-[#12215A] font-light md:text-[26px] lg:text-[30px] leading-none mt-2"
+              >
+                Lorem ipsum details
+              </p>
             </div>
             <div class="flex flex-col items-end justify-end w-full">
-              <div class="bg-[url('./img/descuento.svg')] w-[262px] flex justify-end mb-[20px]">
-                <p class="text-white font-bold text-[36px] pr-[20px]">Descuento</p>
+              <div
+                class="bg-[url('./img/descuento.svg')] bg-cover lg:w-[262px] flex justify-end mb-[20px]"
+              >
+                <p
+                  class="text-white font-bold text-[26px] md:text-[30px] lg:text-[36px] pr-[20px] pl-[30px]"
+                >
+                  Descuento
+                </p>
               </div>
-              <button class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] text-[21px] mr-[20px]">RESERVAR</button>
+              <button
+                class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
+              >
+                RESERVAR
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+      <div class="flex items-center justify-center mt-16">
+        <div
+          class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[20px] py-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+          <p class="md:text-[18px] text-[#12215A] px-2 md:px-[20px] font-bold">
+            ¡Ver más paquetes y promociones!
+          </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="text-center mt-[30px]">
+        <h3 class="font-bold text-[#12215A] text-[30px] lg:text-[50px] leading-none">
+          Paquetes en promoción
+        </h3>
+        <p class="text-[#12215A] text-[20px] lg:text-[30px] font-light leading-none mt-4">
+          Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="mt-6">
+        <swiper-container
+          class="mySwiper pb-16"
+        >
+          <swiper-slide>
+            <div
+              class="bg-[url('./img/promotion-2.png')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
+            >
+              <div
+                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[210px] md:h-[240px] w-full bottom-0 rounded-[17px]"
+              >
+                <div
+                  class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
+                >
+                  <div>
+                    <div class="w-full text-center mt-[10px] md:mt-0">
+                      <p
+                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none"
+                      >
+                        Rorem ipsum dolor + libero et velit interdu
+                      </p>
+                      <p
+                        class="text-[#12215A] font-light lg:text-[18px] leading-none mt-2"
+                      >
+                        Lorem ipsum details
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mt-4">
+                    <div class="w-full ml-[30px]">
+                      <div class="relative text-white font-bold">
+                        <span class="text-[26px]">S/</span>
+                        <span class="text-[60px] leading-none">00.</span>
+                        <span class="text-[20px] leading-none">00</span>
+                        <p
+                          class="absolute top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
+                        >
+                          Desde
+                        </p>
+                        <p
+                          class="absolute bottom-[-10px] text-[11px] font-normal text-[#12215A] left-[70px]"
+                        >
+                          por persona
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-end justify-end w-full">
+                      <button
+                        class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
+                      >
+                        RESERVAR
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div
+              class="bg-[url('./img/promotion-2.png')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
+            >
+              <div
+                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[210px] md:h-[240px] w-full bottom-0 rounded-[17px]"
+              >
+                <div
+                  class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
+                >
+                  <div>
+                    <div class="w-full text-center mt-[10px] md:mt-0">
+                      <p
+                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none"
+                      >
+                        Rorem ipsum dolor + libero et velit interdu
+                      </p>
+                      <p
+                        class="text-[#12215A] font-light lg:text-[18px] leading-none mt-2"
+                      >
+                        Lorem ipsum details
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mt-4">
+                    <div class="w-full ml-[30px]">
+                      <div class="relative text-white font-bold">
+                        <span class="text-[26px]">S/</span>
+                        <span class="text-[60px] leading-none">00.</span>
+                        <span class="text-[20px] leading-none">00</span>
+                        <p
+                          class="absolute top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
+                        >
+                          Desde
+                        </p>
+                        <p
+                          class="absolute bottom-[-10px] text-[11px] font-normal text-[#12215A] left-[70px]"
+                        >
+                          por persona
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-end justify-end w-full">
+                      <button
+                        class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
+                      >
+                        RESERVAR
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div
+              class="bg-[url('./img/promotion-2.png')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
+            >
+              <div
+                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[210px] md:h-[240px] w-full bottom-0 rounded-[17px]"
+              >
+                <div
+                  class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
+                >
+                  <div>
+                    <div class="w-full text-center mt-[10px] md:mt-0">
+                      <p
+                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none"
+                      >
+                        Rorem ipsum dolor + libero et velit interdu
+                      </p>
+                      <p
+                        class="text-[#12215A] font-light lg:text-[18px] leading-none mt-2"
+                      >
+                        Lorem ipsum details
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mt-4">
+                    <div class="w-full ml-[30px]">
+                      <div class="relative text-white font-bold">
+                        <span class="text-[26px]">S/</span>
+                        <span class="text-[60px] leading-none">00.</span>
+                        <span class="text-[20px] leading-none">00</span>
+                        <p
+                          class="absolute top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
+                        >
+                          Desde
+                        </p>
+                        <p
+                          class="absolute bottom-[-10px] text-[11px] font-normal text-[#12215A] left-[70px]"
+                        >
+                          por persona
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-end justify-end w-full">
+                      <button
+                        class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
+                      >
+                        RESERVAR
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div
+              class="bg-[url('./img/promotion-2.png')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
+            >
+              <div
+                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[210px] md:h-[240px] w-full bottom-0 rounded-[17px]"
+              >
+                <div
+                  class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
+                >
+                  <div>
+                    <div class="w-full text-center mt-[10px] md:mt-0">
+                      <p
+                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none"
+                      >
+                        Rorem ipsum dolor + libero et velit interdu
+                      </p>
+                      <p
+                        class="text-[#12215A] font-light lg:text-[18px] leading-none mt-2"
+                      >
+                        Lorem ipsum details
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mt-4">
+                    <div class="w-full ml-[30px]">
+                      <div class="relative text-white font-bold">
+                        <span class="text-[26px]">S/</span>
+                        <span class="text-[60px] leading-none">00.</span>
+                        <span class="text-[20px] leading-none">00</span>
+                        <p
+                          class="absolute top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
+                        >
+                          Desde
+                        </p>
+                        <p
+                          class="absolute bottom-[-10px] text-[11px] font-normal text-[#12215A] left-[70px]"
+                        >
+                          por persona
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-end justify-end w-full">
+                      <button
+                        class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
+                      >
+                        RESERVAR
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </section>
+
+    <section>
+      
+    </section>
+
+    <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+      <div class="mt-10">
+        <img class="w-full" src="./img/video.jpg" alt="">
+        <div class="flex items-center justify-center mt-10">
+          <button class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[40px] py-2">
+            <p class="font-bold text-[18px]">¡Quiero reservar! </p>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <footer class="border-b-[30px] border-[#11CCC7] mt-10">
-      <div class="lg:w-[1024px] mx-auto border-t-[3px] border-[#12215A]">
-        <div class="flex items-center py-[30px]">
-          <div class="w-[35%] justify-center flex-col flex items-center">
-            <img src="./img/logo-color.svg" alt="">
+      <div
+        class="lg:w-[1024px] mx-auto px-[15px] lg:px-0 border-t-[3px] border-[#12215A]"
+      >
+        <div class="flex flex-col-reverse md:flex-row items-center py-[30px]">
+          <div class="md:w-[35%] justify-center flex-col flex items-center">
+            <img src="./img/logo-color.svg" alt="" />
             <div class="flex items-center justify-between pt-6 w-[120px]">
               <a href="">
-                <img src="./img/fb.svg" alt="">
+                <img src="./img/fb.svg" alt="" />
               </a>
               <a href="">
-                <img src="./img/inst.svg" alt="">
+                <img src="./img/inst.svg" alt="" />
               </a>
               <a href="">
-                <img src="./img/wsp.svg" alt="">
+                <img src="./img/wsp.svg" alt="" />
               </a>
             </div>
           </div>
-          <div class="w-[75%]">
+          <div class="md:w-[75%] mb-[20px] md:mb-0">
             <div class="flex gap-10">
               <div class="flex flex-col text-[18px] w-full">
                 <h3 class="text-[#00B2E4] font-bold">Inicio</h3>
@@ -124,7 +539,39 @@
           </div>
         </div>
       </div>
-
     </footer>
   </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+  <script>
+    const swiperEl = document.querySelector("swiper-container");
+    Object.assign(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        clickable: true,
+      },
+      breakpoints: {
+        "@0.00": {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        "@0.75": {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        "@1.00": {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        "@1.50": {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+    swiperEl.initialize();
+  </script>
 </html>

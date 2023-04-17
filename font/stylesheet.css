@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Skater Girls Rock';
+    src: url('SkaterGirlsRock.woff2') format('woff2'),
+        url('SkaterGirlsRock.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font-sgr {
+    font-family: 'Skater Girls Rock';
+}

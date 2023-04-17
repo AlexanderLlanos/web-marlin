@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&family=Montserrat:wght@100;400;500;600;800&display=swap" rel="stylesheet">
+    <link href="font/stylesheet.css" rel="stylesheet">
   </head>
   <style>
     body {
@@ -28,6 +29,22 @@
 
     .nav {
       display: flex;
+    }
+
+    .gb-text {
+      position: relative;
+    }
+
+    .gb-text::before {
+      content: '';
+      position: absolute;
+      background-color: #00B2E4;
+      rotate: 359deg;
+      left: -4px;
+      right: -4px;
+      top: -4px;
+      bottom: -4px;
+      border-radius: 6px;
     }
 
     @media (max-width: 769px) {
@@ -125,7 +142,7 @@
         <div class="flex items-center justify-center flex-col h-[505px]">
           <img src="./img/banner-text.svg" alt="" />
           <button
-            class="bg-white py-[8px] px-[31px] rounded-full font-bold text-[#12215A] text-[15px] mt-[60px]"
+            class="bg-white py-[8px] px-[31px] rounded-full font-bold text-[#12215A] text-[15px] mt-[60px] shadow-white/30 shadow-lg"
           >
             ¡Ver más paquetes y promociones!
           </button>
@@ -137,43 +154,69 @@
         class="bg-[url('./img/box-descuento.jpg')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
       >
         <div
-          class="absolute bg-[url('./img/box-descuento-bg-mobile.png')] md:bg-[url('./img/box-descuento-bg.png')] bg-cover h-[280px] md:h-[199px] w-full bottom-0 rounded-[17px]"
+          class="absolute bg-[url('./img/box-descuento-bg-mobile.png')] md:bg-[url('./img/box-descuento-bg.png')] bg-cover h-[260px] md:h-[199px] w-full bottom-0 rounded-[17px]"
         >
           <div
-            class="flex flex-col md:flex-row items-end h-full gap-4 justify-end md:gap-10 pb-[15px] md:pb-[30px]"
+            class="flex flex-col md:flex-row items-end h-full gap-4 justify-end md:gap-0 pb-[15px] md:pb-[20px]"
           >
-            <div class="flex items-center justify-center w-full">
-              <div class="relative text-white font-bold">
-                <span class="text-[26px]">S/</span>
-                <span class="text-[40px] lg:text-[60px] leading-none">00.</span>
-                <span class="text-[20px] leading-none">00</span>
+            <div class="hidden md:flex items-center justify-center">
+              <div class="relative text-white font-bold flex flex-nowrap items-end ml-10">
+                <span class="text-[30px] pb-2 pr-1 font-sgr">S/</span>
+                <span class="font-sgr text-[80px] leading-none">50.</span>
+                <span class="text-[38px] pb-2 font-sgr leading-none mb-1">00</span>
                 <p
-                  class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
+                  class="absolute top-[-4px] lg:top-[4px] text-[11px] font-medium text-[#12215A] left-[-10px]"
                 >
                   Desde
                 </p>
                 <p
-                  class="absolute bottom-[-16px] text-[11px] font-normal text-[#12215A] right-[20px]"
+                  class="absolute bottom-[-5px] text-[11px] font-medium text-[#12215A] right-[20px]"
                 >
                   por persona
                 </p>
               </div>
             </div>
-            <div class="w-full text-center mt-[10px] md:mt-0">
+            <div class="w-full text-center mt-[10px] md:mt-0 pb-4">
               <p
                 class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none"
               >
-                Rorem ipsum dolor + libero et velit interdu
+              Paseos costeros en bahía con avistamiento
+              de aves marinas y nado con tortugas
               </p>
               <p
-                class="text-[#12215A] font-normal md:text-[26px] lg:text-[30px] leading-none mt-2"
+                class="text-[#12215A] font-normal md:text-[14px] lg:text-[18px] leading-none mt-4"
               >
-                Lorem ipsum details
+                Disfruta de nadar con tortugas
               </p>
             </div>
-            <div class="flex flex-col items-end justify-end w-full">
-              <div
-                class="bg-[url('./img/descuento.svg')] bg-cover lg:w-[262px] flex justify-end mb-[20px]"
+            <div class="flex justify-between md:justify-end w-full md:w-fit">
+              <div class="flex md:hidden items-center justify-center pl-5">
+                <div class="relative text-white font-bold flex flex-nowrap items-end">
+                  <span class="text-[30px] pb-2 pr-1 font-sgr">S/</span>
+                  <span class="font-sgr text-[80px] leading-none">50.</span>
+                  <span class="text-[38px] pb-2 font-sgr leading-none mb-1">00</span>
+                  <p
+                    class="absolute top-[-4px] lg:top-[4px] text-[11px] font-medium text-[#12215A] left-[-10px]"
+                  >
+                    Desde
+                  </p>
+                  <p
+                    class="absolute bottom-[-5px] text-[11px] font-medium text-[#12215A] right-[20px]"
+                  >
+                    por persona
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col items-end justify-end">
+                <button
+                  class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
+                >
+                  RESERVAR
+                </button>
+              </div>
+            </div>
+            <div
+                class="bg-[url('./img/descuento.svg')] bg-cover lg:w-[262px] flex justify-end mb-[20px] absolute bottom-[210px] md:bottom-[110px]"
               >
                 <p
                   class="text-white font-bold text-[26px] md:text-[30px] lg:text-[36px] pr-[20px] pl-[30px]"
@@ -181,12 +224,6 @@
                   Descuento
                 </p>
               </div>
-              <button
-                class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
-              >
-                RESERVAR
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -194,7 +231,7 @@
     <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
       <div class="flex items-center justify-center mt-16">
         <div
-          class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[20px] py-2"
+          class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[20px] py-2 shadow-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -257,24 +294,24 @@
           </svg>
         </div>
       </div>
-      <div class="text-center mt-[30px]">
+      <div class="text-center mt-14">
         <h3 class="font-bold text-[#12215A] text-[30px] lg:text-[50px] leading-none">
-          Paquetes en promoción
+          Paquetes <span class="gb-text text-white"><span class="relative">en promoción</span></span>
         </h3>
-        <p class="text-[#12215A] text-[20px] lg:text-[30px] font-normal leading-none mt-4">
-          Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <p class="text-[#12215A] text-[20px] lg:text-[30px] font-normal leading-none mt-6">
+          ¡Descuento especiales!
         </p>
       </div>
       <div class="mt-6">
         <swiper-container
-          class="mySwiper pb-16"
+          class="mySwiper p-2 pb-16 pt-4"
         >
           <swiper-slide>
             <div
-              class="bg-[url('./img/promotion-2.png')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
+              class="bg-[url('./img/promotion-1.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
             >
               <div
-                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[210px] md:h-[240px] w-full bottom-0 rounded-[17px]"
+                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]"
               >
                 <div
                   class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
@@ -284,28 +321,23 @@
                       <p
                         class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto"
                       >
-                        Rorem ipsum dolor + libero et velit interdu
-                      </p>
-                      <p
-                        class="text-[#12215A] font-normal lg:text-[18px] leading-none mt-2"
-                      >
-                        Lorem ipsum details
+                      Alquiler de embarcaciones para eventos privados
                       </p>
                     </div>
                   </div>
-                  <div class="flex items-center justify-between mt-4">
+                  <div class="flex items-center justify-between mt-6">
                     <div class="w-full ml-[30px]">
                       <div class="relative text-white font-bold">
-                        <span class="text-[26px]">S/</span>
-                        <span class="text-[40px] lg:text-[60px] leading-none">00.</span>
-                        <span class="text-[20px] leading-none">00</span>
+                        <span class="text-[26px] font-sgr">S/</span>
+                        <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
+                        <span class="text-[20px] font-sgr leading-none">00</span>
                         <p
                           class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
                         >
                           Desde
                         </p>
                         <p
-                          class="absolute bottom-[-10px] text-[11px] font-normal text-[#12215A] left-[70px]"
+                          class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]"
                         >
                           por persona
                         </p>
@@ -325,10 +357,10 @@
           </swiper-slide>
           <swiper-slide>
             <div
-              class="bg-[url('./img/promotion-2.png')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
+              class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
             >
               <div
-                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[210px] md:h-[240px] w-full bottom-0 rounded-[17px]"
+                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]"
               >
                 <div
                   class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
@@ -336,30 +368,25 @@
                   <div>
                     <div class="w-full text-center mt-[10px] md:mt-0">
                       <p
-                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto"
+                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[80%] mx-auto"
                       >
-                        Rorem ipsum dolor + libero et velit interdu
-                      </p>
-                      <p
-                        class="text-[#12215A] font-normal lg:text-[18px] leading-none mt-2"
-                      >
-                        Lorem ipsum details
+                        Paseos en bahía contemplando el atardecer de Máncora
                       </p>
                     </div>
                   </div>
-                  <div class="flex items-center justify-between mt-4">
+                  <div class="flex items-center justify-between mt-6">
                     <div class="w-full ml-[30px]">
                       <div class="relative text-white font-bold">
-                        <span class="text-[26px]">S/</span>
-                        <span class="text-[40px] lg:text-[60px] leading-none">00.</span>
-                        <span class="text-[20px] leading-none">00</span>
+                        <span class="text-[26px] font-sgr">S/</span>
+                        <span class="text-[40px] font-sgr lg:text-[60px] leading-none">50.</span>
+                        <span class="text-[20px] font-sgr leading-none">00</span>
                         <p
                           class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
                         >
                           Desde
                         </p>
                         <p
-                          class="absolute bottom-[-10px] text-[11px] font-normal text-[#12215A] left-[70px]"
+                          class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]"
                         >
                           por persona
                         </p>
@@ -379,10 +406,10 @@
           </swiper-slide>
           <swiper-slide>
             <div
-              class="bg-[url('./img/promotion-2.png')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
+              class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
             >
               <div
-                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[210px] md:h-[240px] w-full bottom-0 rounded-[17px]"
+                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]"
               >
                 <div
                   class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
@@ -392,28 +419,23 @@
                       <p
                         class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto"
                       >
-                        Rorem ipsum dolor + libero et velit interdu
-                      </p>
-                      <p
-                        class="text-[#12215A] font-normal lg:text-[18px] leading-none mt-2"
-                      >
-                        Lorem ipsum details
+                      Alquiler de embarcaciones para eventos privados
                       </p>
                     </div>
                   </div>
-                  <div class="flex items-center justify-between mt-4">
+                  <div class="flex items-center justify-between mt-6">
                     <div class="w-full ml-[30px]">
                       <div class="relative text-white font-bold">
-                        <span class="text-[26px]">S/</span>
-                        <span class="text-[40px] lg:text-[60px] leading-none">00.</span>
-                        <span class="text-[20px] leading-none">00</span>
+                        <span class="text-[26px] font-sgr">S/</span>
+                        <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
+                        <span class="text-[20px] font-sgr leading-none">00</span>
                         <p
                           class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
                         >
                           Desde
                         </p>
                         <p
-                          class="absolute bottom-[-10px] text-[11px] font-normal text-[#12215A] left-[70px]"
+                          class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]"
                         >
                           por persona
                         </p>
@@ -433,10 +455,10 @@
           </swiper-slide>
           <swiper-slide>
             <div
-              class="bg-[url('./img/promotion-2.png')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
+              class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
             >
               <div
-                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[210px] md:h-[240px] w-full bottom-0 rounded-[17px]"
+                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]"
               >
                 <div
                   class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
@@ -446,28 +468,23 @@
                       <p
                         class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto"
                       >
-                        Rorem ipsum dolor + libero et velit interdu
-                      </p>
-                      <p
-                        class="text-[#12215A] font-normal lg:text-[18px] leading-none mt-2"
-                      >
-                        Lorem ipsum details
+                      Alquiler de embarcaciones para eventos privados
                       </p>
                     </div>
                   </div>
-                  <div class="flex items-center justify-between mt-4">
+                  <div class="flex items-center justify-between mt-6">
                     <div class="w-full ml-[30px]">
                       <div class="relative text-white font-bold">
-                        <span class="text-[26px]">S/</span>
-                        <span class="text-[40px] lg:text-[60px] leading-none">00.</span>
-                        <span class="text-[20px] leading-none">00</span>
+                        <span class="text-[26px] font-sgr">S/</span>
+                        <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
+                        <span class="text-[20px] font-sgr leading-none">00</span>
                         <p
                           class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
                         >
                           Desde
                         </p>
                         <p
-                          class="absolute bottom-[-10px] text-[11px] font-normal text-[#12215A] left-[70px]"
+                          class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]"
                         >
                           por persona
                         </p>
@@ -504,7 +521,7 @@
             </div>
           </div>
           <div class="flex items-center justify-center pt-10 pb-20">
-            <button class="flex items-center justify-center bg-white rounded-full text-center px-[40px] py-2">
+            <button class="flex items-center justify-center bg-white rounded-full text-center px-[40px] py-2 shadow-md">
               <p class="font-bold text-[#12215A] text-[18px]">¡Quiero reservar! </p>
             </button>
           </div>
@@ -513,7 +530,7 @@
               ¿Cuál será nuestra próxima aventura?
             </h3>
             <p class="text-white text-[20px] lg:text-[30px] font-normal leading-none mt-4">
-              Conoce nuestros tours guiados
+              Conoce nuestros <span class="gb-text text-white"><span class="relative font-bold">tours guiados</span></span>
             </p>
           </div>
           <div class="mt-6">
@@ -523,20 +540,66 @@
                   <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
                     <img class="round-[20px]" src="./img/tours-1.png" alt="">
                   </div>
-                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px]">
-                    <h4 class="text-[#606060] font-bold leading-none mb-2">Acceso Lorem ipsum dolor sit amet, consectetuer.</h4>
-                    <p class="text-sm text-[#606060] mb-2">Duración</p>
+                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
+                    <h4 class="text-[#606060] font-bold leading-none mb-2">Avistamiento de ballenas y nado con tortugas.</h4>
+                    <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
                     <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
-                      <p class="text-white">Cupos límitados</p>
+                      <p class="text-white text-sm">Cupos límitados</p>
                     </div>
-                    <div class="mb-2">
-                      <p class="text-[#FA503F] text-sm">*No incluye:</p>
-                      <p class="text-[#FA503F] text-xs">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diameuismod.</p>
+                    <div class="mb-4">
+                      <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
+                      <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
                     </div>
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-start justify-between">
                       <div>
-                        <p class="text-[30px] font-bold text-[#12215A]">S/00.00</p>
-                        <p class="text-sm text-[#606060] mb-2">por persona</p>
+                        <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/40.00</p>
+                        <p class="text-xs text-[#606060]">por persona</p>
+                      </div>
+                      <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
+                    <img class="round-[20px]" src="./img/tours-2.png" alt="">
+                  </div>
+                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
+                    <h4 class="text-[#606060] font-bold leading-none mb-2">Paseos costeros en bahía con avistamiento de aves marinas y nado con tortugas.</h4>
+                    <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
+                    <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
+                      <p class="text-white text-sm">Cupos límitados</p>
+                    </div>
+                    <div class="mb-4">
+                      <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
+                      <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
+                    </div>
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/50.00</p>
+                        <p class="text-xs text-[#606060]">por persona</p>
+                      </div>
+                      <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
+                    <img class="round-[20px]" src="./img/tours-3.png" alt="">
+                  </div>
+                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
+                    <h4 class="text-[#606060] font-bold leading-none mb-2">Paseos costeros en bahía de Máncora con buceo de superficie.</h4>
+                    <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
+                    <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
+                      <p class="text-white text-sm">Cupos límitados</p>
+                    </div>
+                    <div class="mb-4">
+                      <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
+                      <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
+                    </div>
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/60.00</p>
+                        <p class="text-xs text-[#606060]">por persona</p>
                       </div>
                       <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
                     </div>
@@ -546,66 +609,20 @@
                   <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
                     <img class="round-[20px]" src="./img/tours-1.png" alt="">
                   </div>
-                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px]">
-                    <h4 class="text-[#606060] font-bold leading-none mb-2">Acceso Lorem ipsum dolor sit amet, consectetuer.</h4>
-                    <p class="text-sm text-[#606060] mb-2">Duración</p>
+                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
+                    <h4 class="text-[#606060] font-bold leading-none mb-2">Paseos costeros en bahía de Máncora con buceo de superficie.</h4>
+                    <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
                     <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
-                      <p class="text-white">Cupos límitados</p>
+                      <p class="text-white text-sm">Cupos límitados</p>
                     </div>
-                    <div class="mb-2">
-                      <p class="text-[#FA503F] text-sm">*No incluye:</p>
-                      <p class="text-[#FA503F] text-xs">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diameuismod.</p>
+                    <div class="mb-4">
+                      <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
+                      <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
                     </div>
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-start justify-between">
                       <div>
-                        <p class="text-[30px] font-bold text-[#12215A]">S/00.00</p>
-                        <p class="text-sm text-[#606060] mb-2">por persona</p>
-                      </div>
-                      <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
-                    <img class="round-[20px]" src="./img/tours-1.png" alt="">
-                  </div>
-                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px]">
-                    <h4 class="text-[#606060] font-bold leading-none mb-2">Acceso Lorem ipsum dolor sit amet, consectetuer.</h4>
-                    <p class="text-sm text-[#606060] mb-2">Duración</p>
-                    <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
-                      <p class="text-white">Cupos límitados</p>
-                    </div>
-                    <div class="mb-2">
-                      <p class="text-[#FA503F] text-sm">*No incluye:</p>
-                      <p class="text-[#FA503F] text-xs">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diameuismod.</p>
-                    </div>
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <p class="text-[30px] font-bold text-[#12215A]">S/00.00</p>
-                        <p class="text-sm text-[#606060] mb-2">por persona</p>
-                      </div>
-                      <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
-                    <img class="round-[20px]" src="./img/tours-1.png" alt="">
-                  </div>
-                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px]">
-                    <h4 class="text-[#606060] font-bold leading-none mb-2">Acceso Lorem ipsum dolor sit amet, consectetuer.</h4>
-                    <p class="text-sm text-[#606060] mb-2">Duración</p>
-                    <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
-                      <p class="text-white">Cupos límitados</p>
-                    </div>
-                    <div class="mb-2">
-                      <p class="text-[#FA503F] text-sm">*No incluye:</p>
-                      <p class="text-[#FA503F] text-xs">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diameuismod.</p>
-                    </div>
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <p class="text-[30px] font-bold text-[#12215A]">S/00.00</p>
-                        <p class="text-sm text-[#606060] mb-2">por persona</p>
+                        <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/60.00</p>
+                        <p class="text-xs text-[#606060]">por persona</p>
                       </div>
                       <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
                     </div>
@@ -622,7 +639,7 @@
       <div class="mt-10">
         <img class="w-full" src="./img/video.jpg" alt="">
         <div class="flex items-center justify-center mt-10">
-          <button class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[40px] py-2">
+          <button class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[40px] py-2 shadow-md">
             <p class="font-bold text-[18px]">¡Quiero reservar! </p>
           </button>
         </div>

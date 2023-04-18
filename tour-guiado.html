@@ -16,13 +16,12 @@
 </head>
 <style>
     .banner-home {
-        background-image: url(./img/box-descuento.jpg);
+        background-image: url(./img/banner-tour.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 608px;
     }
-
 
     .nav {
         display: flex;
@@ -170,24 +169,24 @@
         </div>
     </section>
     <section class="lg:w-[1024px] mx-auto grid-rows-2 mt-[50px] ">
-        <div class="bg-[#11CCC7] py-[6.89px]">
+        <div class="bg-[#11CCC7] px-[15px] lg:px-0 py-[6.89px]">
             <h3 class="text-[22.94px] text-[#12215A] font-light text-center">
                 Escoge tus actividades favoritas</h3>
-            <h2 class="text-center text-[30.28px] text-[#12215A] font-bold mb-[17.18px]">
+            <h2 class="text-center text-[30.28px] text-[#12215A] font-bold mb-[17.18px] leading-none">
                 Selecciona tu aventura, fecha y participantes</h2>
             <form class="lg:mx-[10%]">
-                <div class="flex justify-around lg:text-[14.27px] text-xs text-[#12215A]">
-                    <div class="py-[17px] px-5 bg-white rounded-xl w-[33%]">
+                <div class="flex flex-col md:flex-row justify-around lg:text-[14.27px] text-xs text-[#12215A]">
+                    <div class="py-[17px] px-5 bg-white rounded-xl mb-3 md:mb-0 md:w-[33%]">
                         <select name="" id="" class="w-full">
                             <option value="">Escoge tu aventura</option>
                         </select>
                     </div>
-                    <div class="py-[17px] px-5 bg-white rounded-xl w-[24%]">
+                    <div class="py-[17px] px-5 bg-white rounded-xl mb-3 md:mb-0 md:w-[24%]">
                         <select name="" id="" class="w-full">
                             <option value="">Personas</option>
                         </select>
                     </div>
-                    <div class="py-[17px] px-5 bg-white rounded-xl w-[33%]">
+                    <div class="py-[17px] px-5 bg-white rounded-xl mb-3 md:mb-0 md:w-[33%]">
                         <select name="" id="" class="w-full">
                             <option value="">Selecciona una fecha</option>
                         </select>
@@ -383,49 +382,49 @@
         </div>
     </section>
     <footer class="border-b-[30px] border-[#11CCC7] mt-10">
-        <div class="lg:w-[1024px] mx-auto border-t-[3px] border-[#12215A]">
-            <div class="flex items-center py-[30px]">
-                <div class="w-[35%] justify-center flex-col flex items-center">
-                    <img src="./img/logo-color.svg" alt="">
-                    <div class="flex items-center justify-between pt-6 w-[120px]">
-                        <a href="">
-                            <img src="./img/fb.svg" alt="">
-                        </a>
-                        <a href="">
-                            <img src="./img/inst.svg" alt="">
-                        </a>
-                        <a href="">
-                            <img src="./img/wsp.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="w-[75%]">
-                    <div class="flex gap-10">
-                        <div class="flex flex-col text-[18px] w-full">
-                            <h3 class="text-[#00B2E4] font-bold">Inicio</h3>
-                            <a class="text-[#12215A]" href="">Sobre nosotros</a>
-                            <a class="text-[#12215A]" href="">Tours guiados</a>
-                            <a class="text-[#12215A]" href="">Paquetes y promociones</a>
-                            <a class="text-[#12215A]" href="">Contáctanos</a>
-                        </div>
-                        <div class="flex flex-col w-full">
-                            <div class="flex flex-col">
-                                <h3 class="text-[#00B2E4] font-bold">Oficina</h3>
-                                <p>PJ A00 S/N</p>
-                                <p>Barrio industrial - Máncora</p>
-                            </div>
-                            <div class="flex flex-col">
-                                <h3 class="text-[#00B2E4] font-bold">Reservas</h3>
-                                <p>957 561 266</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div
+          class="lg:w-[1024px] mx-auto px-[15px] lg:px-0 border-t-[3px] border-[#12215A]"
+        >
+          <div class="flex flex-col-reverse md:flex-row items-center py-[30px]">
+            <div class="md:w-[35%] justify-center flex-col flex items-center">
+              <img src="./img/logo-color.svg" alt="" />
+              <div class="flex items-center justify-between pt-6 w-[120px]">
+                <a href="">
+                  <img src="./img/fb.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./img/inst.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="./img/wsp.svg" alt="" />
+                </a>
+              </div>
             </div>
+            <div class="md:w-[75%] mb-[20px] md:mb-0">
+              <div class="flex gap-10">
+                <div class="flex flex-col text-[18px] w-full">
+                  <h3 class="text-[#00B2E4] font-bold">Inicio</h3>
+                  <a class="text-[#12215A]" href="">Sobre nosotros</a>
+                  <a class="text-[#12215A]" href="">Tours guiados</a>
+                  <a class="text-[#12215A]" href="">Paquetes y promociones</a>
+                  <a class="text-[#12215A]" href="">Contáctanos</a>
+                </div>
+                <div class="flex flex-col w-full">
+                  <div class="flex flex-col">
+                    <h3 class="text-[#00B2E4] font-bold">Oficina</h3>
+                    <p>PJ A00 S/N</p>
+                    <p>Barrio industrial - Máncora</p>
+                  </div>
+                  <div class="flex flex-col">
+                    <h3 class="text-[#00B2E4] font-bold">Reservas</h3>
+                    <p>957 561 266</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-    </footer>
+      </footer>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>

@@ -22,17 +22,71 @@
         background-size: cover;
         height: 608px;
     }
+
+
+    .nav {
+        display: flex;
+    }
+
+    .gb-text {
+        position: relative;
+    }
+
+    .gb-text::before {
+        content: '';
+        position: absolute;
+        background-color: #00B2E4;
+        rotate: 359deg;
+        left: -4px;
+        right: -4px;
+        top: -4px;
+        bottom: -4px;
+        border-radius: 6px;
+    }
+
+    @media (max-width: 769px) {
+        .nav {
+            display: none;
+        }
+
+        .nav.active {
+            display: block;
+            position: fixed;
+            background: white;
+            width: 300px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            padding: 15px;
+        }
+    }
 </style>
 
 <body>
     <section class="banner-home">
-        <header class="lg:w-[1024px] mx-auto">
+        <header class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
             <div class="flex items-center justify-between pt-8">
                 <div>
-                    <img src="./img/logo.svg" alt="">
+                    <img src="./img/logo.svg" alt="" />
                 </div>
-                <nav class="flex items-center gap-6">
-                    <ul class="flex items-center gap-6 text-white font-bold text-[18px]">
+                <div class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-8 h-8 stroke-white">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+                <!-- add class active mobile -->
+                <nav class="nav items-center gap-6">
+                    <div class="flex lg:hidden items-end justify-end mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="stroke-[#12215A] w-8 h-8 stroke-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                    <ul
+                        class="flex flex-col lg:flex-row lg:items-center gap-6 text-[#12215A] lg:text-white font-bold text-[18px]">
                         <li>
                             <a href="">Inicio</a>
                         </li>
@@ -46,27 +100,30 @@
                             <a href="">Paquetes y promociones</a>
                         </li>
                     </ul>
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 mt-10 lg:mt-0">
                         <a href="">
-                            <img src="./img/en.svg" alt="">
+                            <img src="./img/en.svg" alt="" />
                         </a>
                         <a href="">
-                            <img src="./img/es.svg" alt="">
+                            <img src="./img/es.svg" alt="" />
                         </a>
                         <button
-                            class="bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]">Contáctanos</button>
+                            class="bg-[#11CCC7] lg:bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]">
+                            Contáctanos
+                        </button>
                     </div>
                 </nav>
             </div>
         </header>
-        <div class="lg:w-[1024px] mx-auto">
-            <div class="flex items-start justify-center h-[608px] w-full pt-16">
-                <div class="w-[55%]">
+        <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+            <div class="lg:flex lg:items-start lg:justify-center h-[608px] w-full pt-16">
+                <div class="lg:w-[55%]">
                     <span class="text-white mb-2">Tour guiado</span>
-                    <h2 class="text-[50.8px] font-bold text-white leading-[50.8px]">Avistamiento de ballenas y nado con
+                    <h2 class="lg:text-[50.8px] text-[30px] font-bold text-white leading-10 lg:leading-[50.8px]">
+                        Avistamiento de ballenas y nado con
                         tortugas.</h2>
                 </div>
-                <div class="ml-[55px] w-[45%] text-white">
+                <div class="lg:ml-[55px] lg:w-[45%] text-white">
                     <p class="font-medium text-sm mb-[17px]">Descripción del servicio</p>
                     <p class="text-[18.81px] text-medium mb-1">Información General</p>
                     <p class="font-bold mb-1">Disponibilidad</p>
@@ -84,10 +141,11 @@
             </div>
         </div>
     </section>
-    <section class="lg:w-[1024px] mx-auto">
-        <div class="flex items-center justify-between mt-6 px-10">
+    <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+        <div class="lg:flex items-center justify-between mt-6 px-10">
             <div class="w-full">
-                <span class="text-[11px] px-[14.66px] py-[6.5px] bg-[#EAEAEA] text-[#12215A] rounded-xl">Cupos limitados</span>
+                <span class="text-[11px] px-[14.66px] py-[6.5px] bg-[#EAEAEA] text-[#12215A] rounded-xl">Cupos
+                    limitados</span>
                 <div class="mt-2 ml-[10px]">
                     <p class="text-[#FA503F] text-[14.27px] mb-1">*No incluye:</p>
                     <p class="text-[#FA503F] text-[14.27px]">Comidas ni bebidas a bordo.</p>
@@ -103,22 +161,22 @@
                     </p>
                 </div>
             </div>
-            <div class="flex flex-col items-end justify-end w-full">
+            <div class="flex lg:flex-col lg:items-end lg:justify-end items-center justify-center w-full">
                 <button
-                    class="bg-[#FA503F] py-[8px] px-[30px] rounded-[12px] font-extrabold text-white md:text-[18px] lg:text-[32.97px] mr-[20px]">
+                    class="bg-[#FA503F] lg:py-[8px] lg:px-[30px] py-4 px-16 rounded-[12px] font-extrabold text-white text-[24px] lg:text-[32.97px] mr-[20px]">
                     RESERVAR
                 </button>
             </div>
         </div>
     </section>
-    <section class="lg:w-[1024px] mx-auto grid-rows-2 mt-[50px]">
+    <section class="lg:w-[1024px] mx-auto grid-rows-2 mt-[50px] ">
         <div class="bg-[#11CCC7] py-[6.89px]">
             <h3 class="text-[22.94px] text-[#12215A] font-light text-center">
                 Escoge tus actividades favoritas</h3>
             <h2 class="text-center text-[30.28px] text-[#12215A] font-bold mb-[17.18px]">
                 Selecciona tu aventura, fecha y participantes</h2>
-            <form class="mx-[10%]">
-                <div class="flex justify-around text-[14.27px] text-[#12215A]">
+            <form class="lg:mx-[10%]">
+                <div class="flex justify-around lg:text-[14.27px] text-xs text-[#12215A]">
                     <div class="py-[17px] px-5 bg-white rounded-xl w-[33%]">
                         <select name="" id="" class="w-full">
                             <option value="">Escoge tu aventura</option>
@@ -129,7 +187,7 @@
                             <option value="">Personas</option>
                         </select>
                     </div>
-                    <div class="py-[17px] px-5 bg-white rounded-xl w-[33 %]">
+                    <div class="py-[17px] px-5 bg-white rounded-xl w-[33%]">
                         <select name="" id="" class="w-full">
                             <option value="">Selecciona una fecha</option>
                         </select>

@@ -1,0 +1,433 @@
+<!doctype html>
+<html class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Marlin Adventures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&family=Montserrat:wght@100;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <link href="font/stylesheet.css" rel="stylesheet">
+</head>
+<style>
+    .banner-home {
+        background-image: url(./img/box-descuento.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 608px;
+    }
+</style>
+
+<body>
+    <section class="banner-home">
+        <header class="lg:w-[1024px] mx-auto">
+            <div class="flex items-center justify-between pt-8">
+                <div>
+                    <img src="./img/logo.svg" alt="">
+                </div>
+                <nav class="flex items-center gap-6">
+                    <ul class="flex items-center gap-6 text-white font-bold text-[18px]">
+                        <li>
+                            <a href="">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="">Sobre nosotros</a>
+                        </li>
+                        <li>
+                            <a href="">Tours guiados</a>
+                        </li>
+                        <li>
+                            <a href="">Paquetes y promociones</a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-2">
+                        <a href="">
+                            <img src="./img/en.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/es.svg" alt="">
+                        </a>
+                        <button
+                            class="bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]">Contáctanos</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="lg:w-[1024px] mx-auto">
+            <div class="flex items-start justify-center h-[608px] w-full pt-16">
+                <div class="w-[55%]">
+                    <span class="text-white mb-2">Tour guiado</span>
+                    <h2 class="text-[50.8px] font-bold text-white leading-[50.8px]">Avistamiento de ballenas y nado con
+                        tortugas.</h2>
+                </div>
+                <div class="ml-[55px] w-[45%] text-white">
+                    <p class="font-medium text-sm mb-[17px]">Descripción del servicio</p>
+                    <p class="text-[18.81px] text-medium mb-1">Información General</p>
+                    <p class="font-bold mb-1">Disponibilidad</p>
+                    <ul class="list-disc pl-4 text-sm mb-3">
+                        <li>De Julio a Octubre</li>
+                        <li>Salidas diarias de Lunes a Domingo</li>
+                        <li>01 servicio diario</li>
+                    </ul>
+                    <p class="font-bold text-sm">Horarios de servicio</p>
+                    <p class="mb-2 text-sm">De 7:00 a.m. a 9:30 a.m.</p>
+                    <p class="font-bold text-sm">Duración de 2.5 - 3 Horas</p>
+                    <p class="font-bold text-sm">Lugar y hora de embarque: </p>
+                    <p>Muelle de Máncora a las 6:30 a.m.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lg:w-[1024px] mx-auto">
+        <div class="flex items-center justify-between mt-6 px-10">
+            <div class="w-full">
+                <span class="text-[11px] px-[14.66px] py-[6.5px] bg-[#EAEAEA] text-[#12215A] rounded-xl">Cupos limitados</span>
+                <div class="mt-2 ml-[10px]">
+                    <p class="text-[#FA503F] text-[14.27px] mb-1">*No incluye:</p>
+                    <p class="text-[#FA503F] text-[14.27px]">Comidas ni bebidas a bordo.</p>
+                </div>
+            </div>
+            <div class="w-full ml-[30px]">
+                <div class="relative text-[#12215A] font-bold">
+                    <span class="text-[70px] font-sgr">S/</span>
+                    <span class="text-[70px] font-sgr leading-none">50.</span>
+                    <span class="text-[70px] font-sgr leading-none">00</span>
+                    <p class="absolute bottom-[10px] text-[11px] font-normal text-[#12215A] right-[100px]">
+                        Por persona
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col items-end justify-end w-full">
+                <button
+                    class="bg-[#FA503F] py-[8px] px-[30px] rounded-[12px] font-extrabold text-white md:text-[18px] lg:text-[32.97px] mr-[20px]">
+                    RESERVAR
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="lg:w-[1024px] mx-auto grid-rows-2 mt-[50px]">
+        <div class="bg-[#11CCC7] py-[6.89px]">
+            <h3 class="text-[22.94px] text-[#12215A] font-light text-center">
+                Escoge tus actividades favoritas</h3>
+            <h2 class="text-center text-[30.28px] text-[#12215A] font-bold mb-[17.18px]">
+                Selecciona tu aventura, fecha y participantes</h2>
+            <form class="mx-[10%]">
+                <div class="flex justify-around text-[14.27px] text-[#12215A]">
+                    <div class="py-[17px] px-5 bg-white rounded-xl w-[33%]">
+                        <select name="" id="" class="w-full">
+                            <option value="">Escoge tu aventura</option>
+                        </select>
+                    </div>
+                    <div class="py-[17px] px-5 bg-white rounded-xl w-[24%]">
+                        <select name="" id="" class="w-full">
+                            <option value="">Personas</option>
+                        </select>
+                    </div>
+                    <div class="py-[17px] px-5 bg-white rounded-xl w-[33 %]">
+                        <select name="" id="" class="w-full">
+                            <option value="">Selecciona una fecha</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-[17px]">
+                    <button
+                        class="font-bold text-[#12215A] text-[18.81px] py-[7px] bg-white rounded-3xl px-[52px]">Descubrir
+                        más</button>
+                </div>
+            </form>
+            <div>
+
+            </div>
+        </div>
+    </section>
+    <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+        <div class="text-center mt-14">
+            <h3 class="font-bold text-[#12215A] text-[30px] lg:text-[50px] leading-none">
+                Paquetes relacionados
+            </h3>
+            <p class="text-[#12215A] text-[20px] lg:text-[30px] font-normal leading-none mt-6">
+                Descubre nuestra variedad de servicios.
+            </p>
+        </div>
+        <div class="mt-6">
+            <swiper-container class="mySwiper p-2 pb-16 pt-4">
+                <swiper-slide>
+                    <div
+                        class="bg-[url('./img/promotion-1.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                        <div
+                            class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]">
+                            <div class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]">
+                                <div>
+                                    <div class="w-full text-center mt-[10px] md:mt-0">
+                                        <p
+                                            class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto">
+                                            Alquiler de embarcaciones para eventos privados
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mt-6">
+                                    <div class="w-full ml-[30px]">
+                                        <div class="relative text-white font-bold">
+                                            <span class="text-[26px] font-sgr">S/</span>
+                                            <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
+                                            <span class="text-[20px] font-sgr leading-none">00</span>
+                                            <p
+                                                class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">
+                                                Desde
+                                            </p>
+                                            <p
+                                                class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]">
+                                                por persona
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-end w-full">
+                                        <button
+                                            class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]">
+                                            RESERVAR
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div
+                        class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                        <div
+                            class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]">
+                            <div class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]">
+                                <div>
+                                    <div class="w-full text-center mt-[10px] md:mt-0">
+                                        <p
+                                            class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[80%] mx-auto">
+                                            Paseos en bahía contemplando el atardecer de Máncora
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mt-6">
+                                    <div class="w-full ml-[30px]">
+                                        <div class="relative text-white font-bold">
+                                            <span class="text-[26px] font-sgr">S/</span>
+                                            <span class="text-[40px] font-sgr lg:text-[60px] leading-none">50.</span>
+                                            <span class="text-[20px] font-sgr leading-none">00</span>
+                                            <p
+                                                class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">
+                                                Desde
+                                            </p>
+                                            <p
+                                                class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]">
+                                                por persona
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-end w-full">
+                                        <button
+                                            class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]">
+                                            RESERVAR
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div
+                        class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                        <div
+                            class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]">
+                            <div class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]">
+                                <div>
+                                    <div class="w-full text-center mt-[10px] md:mt-0">
+                                        <p
+                                            class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto">
+                                            Alquiler de embarcaciones para eventos privados
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mt-6">
+                                    <div class="w-full ml-[30px]">
+                                        <div class="relative text-white font-bold">
+                                            <span class="text-[26px] font-sgr">S/</span>
+                                            <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
+                                            <span class="text-[20px] font-sgr leading-none">00</span>
+                                            <p
+                                                class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">
+                                                Desde
+                                            </p>
+                                            <p
+                                                class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]">
+                                                por persona
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-end w-full">
+                                        <button
+                                            class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]">
+                                            RESERVAR
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div
+                        class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                        <div
+                            class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]">
+                            <div class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]">
+                                <div>
+                                    <div class="w-full text-center mt-[10px] md:mt-0">
+                                        <p
+                                            class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto">
+                                            Alquiler de embarcaciones para eventos privados
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mt-6">
+                                    <div class="w-full ml-[30px]">
+                                        <div class="relative text-white font-bold">
+                                            <span class="text-[26px] font-sgr">S/</span>
+                                            <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
+                                            <span class="text-[20px] font-sgr leading-none">00</span>
+                                            <p
+                                                class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">
+                                                Desde
+                                            </p>
+                                            <p
+                                                class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]">
+                                                por persona
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-end w-full">
+                                        <button
+                                            class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]">
+                                            RESERVAR
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+        </div>
+    </section>
+    <footer class="border-b-[30px] border-[#11CCC7] mt-10">
+        <div class="lg:w-[1024px] mx-auto border-t-[3px] border-[#12215A]">
+            <div class="flex items-center py-[30px]">
+                <div class="w-[35%] justify-center flex-col flex items-center">
+                    <img src="./img/logo-color.svg" alt="">
+                    <div class="flex items-center justify-between pt-6 w-[120px]">
+                        <a href="">
+                            <img src="./img/fb.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/inst.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/wsp.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-[75%]">
+                    <div class="flex gap-10">
+                        <div class="flex flex-col text-[18px] w-full">
+                            <h3 class="text-[#00B2E4] font-bold">Inicio</h3>
+                            <a class="text-[#12215A]" href="">Sobre nosotros</a>
+                            <a class="text-[#12215A]" href="">Tours guiados</a>
+                            <a class="text-[#12215A]" href="">Paquetes y promociones</a>
+                            <a class="text-[#12215A]" href="">Contáctanos</a>
+                        </div>
+                        <div class="flex flex-col w-full">
+                            <div class="flex flex-col">
+                                <h3 class="text-[#00B2E4] font-bold">Oficina</h3>
+                                <p>PJ A00 S/N</p>
+                                <p>Barrio industrial - Máncora</p>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="text-[#00B2E4] font-bold">Reservas</h3>
+                                <p>957 561 266</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script>
+    const swiperEl = document.querySelector("swiper-container");
+    Object.assign(swiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            clickable: true,
+        },
+        breakpoints: {
+            "@0.00": {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            "@0.75": {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            "@1.00": {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            "@1.50": {
+                slidesPerView: 2,
+                spaceBetween: 50,
+            },
+        },
+    });
+    swiperEl.initialize();
+
+    var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            "@0.00": {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            "@0.75": {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            "@1.00": {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            "@1.50": {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
+
+</html>

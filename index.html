@@ -1,754 +1,637 @@
 <!DOCTYPE html>
 <html class="h-full">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Marlin Adventures</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&family=Montserrat:wght@100;400;500;600;800&display=swap" rel="stylesheet">
-    <link href="font/stylesheet.css" rel="stylesheet">
-  </head>
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
 
-    .banner-home {
-      background-image: url(./img/banner-home.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 608px;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <title>Marlin Adventures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,400;1,700&family=Montserrat:wght@100;400;500;600;800&display=swap"
+    rel="stylesheet">
+  <link href="font/stylesheet.css" rel="stylesheet">
+</head>
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
 
+  .banner-home {
+    background-image: url(./img/banner-home.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 608px;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .gb-text {
+    position: relative;
+  }
+
+  .gb-text::before {
+    content: '';
+    position: absolute;
+    background-color: #00B2E4;
+    rotate: 359deg;
+    left: -4px;
+    right: -4px;
+    top: -4px;
+    bottom: -4px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 769px) {
     .nav {
-      display: flex;
+      display: none;
     }
 
-    .gb-text {
-      position: relative;
+    .nav.active {
+      display: block;
+      position: fixed;
+      background: white;
+      width: 300px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      padding: 15px;
     }
+  }
+</style>
 
-    .gb-text::before {
-      content: '';
-      position: absolute;
-      background-color: #00B2E4;
-      rotate: 359deg;
-      left: -4px;
-      right: -4px;
-      top: -4px;
-      bottom: -4px;
-      border-radius: 6px;
-    }
-
-    @media (max-width: 769px) {
-      .nav {
-        display: none;
-      }
-
-      .nav.active {
-        display: block;
-        position: fixed;
-        background: white;
-        width: 300px;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-        padding: 15px;
-      }
-    }
-  </style>
-  <body>
-    <section class="banner-home rounded-b-[20px]">
-      <header class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
-        <div class="flex items-center justify-between pt-8">
-          <div>
-            <img src="./img/logo.svg" alt="" />
-          </div>
-          <div class="lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-8 h-8 stroke-white"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </div>
-          <!-- add class active mobile -->
-          <nav class="nav items-center gap-6">
-            <div class="flex lg:hidden items-end justify-end mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="stroke-[#12215A] w-8 h-8 stroke-2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </div>
-            <ul
-              class="flex flex-col lg:flex-row lg:items-center gap-6 text-[#12215A] lg:text-white font-bold text-[18px]"
-            >
-              <li>
-                <a href="">Inicio</a>
-              </li>
-              <li>
-                <a href="">Sobre nosotros</a>
-              </li>
-              <li>
-                <a href="">Tours guiados</a>
-              </li>
-              <li>
-                <a href="">Paquetes y promociones</a>
-              </li>
-            </ul>
-            <div class="flex items-center gap-2 mt-10 lg:mt-0">
-              <a href="">
-                <img src="./img/en.svg" alt="" />
-              </a>
-              <a href="">
-                <img src="./img/es.svg" alt="" />
-              </a>
-              <button
-                class="bg-[#11CCC7] lg:bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]"
-              >
-                Contáctanos
-              </button>
-            </div>
-          </nav>
+<body>
+  <header class=" bg-black w-full px-16 py-6">
+    <div class="flex items-center justify-between">
+      <div>
+        <img src="./img/logo.svg" alt="" />
+      </div>
+      <div class="lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-8 h-8 stroke-white">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </div>
+      <!-- add class active mobile -->
+      <nav class="nav items-center gap-6">
+        <div class="flex lg:hidden items-end justify-end mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="stroke-[#12215A] w-8 h-8 stroke-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </div>
-      </header>
-      <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
-        <div class="flex items-center justify-center flex-col h-[505px]">
-          <img src="./img/banner-text.svg" alt="" />
-          <button
-            class="bg-white py-[8px] px-[31px] rounded-full font-bold text-[#12215A] text-[15px] mt-[60px] shadow-white/30 shadow-lg"
-          >
-            ¡Ver más paquetes y promociones!
+        <ul class="flex flex-col lg:flex-row lg:items-center gap-6 text-[#12215A] lg:text-white font-bold text-[18px]">
+          <li>
+            <a href="">Inicio</a>
+          </li>
+          <li>
+            <a href="">Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="">Tours guiados</a>
+          </li>
+          <li>
+            <a href="">Paquetes y promociones</a>
+          </li>
+        </ul>
+        <div class="flex items-center gap-2 mt-10 lg:mt-0">
+          <a href="">
+            <img src="./img/en.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="./img/es.svg" alt="" />
+          </a>
+          <button class="bg-[#11CCC7] lg:bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]">
+            Contáctanos
           </button>
         </div>
+      </nav>
+    </div>
+  </header>
+  <section class="rounded-b-[20px] relative h-[608px]">
+    <img src="./img/banner-home.jpg" alt="" class="h-full w-full">
+    <div class="absolute bottom-[10%] md:left-[30%] lg:left-[40%] left-[10%]">
+      <div class="flex items-center justify-center flex-col">
+        <img src="./img/banner-text.svg" alt="" />
+        <button
+          class="bg-white py-[8px] px-[31px] rounded-full font-bold text-[#12215A] text-[15px] mt-[60px] shadow-white/30 shadow-lg">
+          ¡Ver más paquetes y promociones!
+        </button>
       </div>
-    </section>
-    <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+    </div>
+  </section>
+  <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+    <div class="bg-[url('./img/box-descuento.jpg')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative">
       <div
-        class="bg-[url('./img/box-descuento.jpg')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative"
-      >
-        <div
-          class="absolute bg-[url('./img/box-descuento-bg-mobile.png')] md:bg-[url('./img/box-descuento-bg.png')] bg-cover h-[260px] md:h-[199px] w-full bottom-0 rounded-[17px]"
-        >
-          <div
-            class="flex flex-col md:flex-row items-end h-full gap-4 justify-end md:gap-0 pb-[15px] md:pb-[20px]"
-          >
-            <div class="hidden md:flex items-center justify-center">
-              <div class="relative text-white font-bold flex flex-nowrap items-end ml-10">
+        class="absolute bg-[url('./img/box-descuento-bg-mobile.png')] md:bg-[url('./img/box-descuento-bg.png')] bg-cover h-[260px] md:h-[199px] w-full bottom-0 rounded-[17px]">
+        <div class="flex flex-col md:flex-row items-end h-full gap-4 justify-end md:gap-0 pb-[15px] md:pb-[20px]">
+          <div class="hidden md:flex items-center justify-center">
+            <div class="relative text-white font-bold flex flex-nowrap items-end ml-10">
+              <span class="text-[30px] pb-2 pr-1 font-sgr">S/</span>
+              <span class="font-sgr text-[80px] leading-none">50.</span>
+              <span class="text-[38px] pb-2 font-sgr leading-none mb-1">00</span>
+              <p class="absolute top-[-4px] lg:top-[4px] text-[11px] font-medium text-[#12215A] left-[-10px]">
+                Desde
+              </p>
+              <p class="absolute bottom-[-5px] text-[11px] font-medium text-[#12215A] right-[20px]">
+                por persona
+              </p>
+            </div>
+          </div>
+          <div class="w-full text-center mt-[10px] md:mt-0 pb-4">
+            <p class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none">
+              Paseos costeros en bahía con avistamiento
+              de aves marinas y nado con tortugas
+            </p>
+            <p class="text-[#12215A] font-normal md:text-[14px] lg:text-[18px] leading-none mt-4">
+              Disfruta de nadar con tortugas
+            </p>
+          </div>
+          <div class="flex justify-between md:justify-end w-full md:w-fit">
+            <div class="flex md:hidden items-center justify-center pl-5">
+              <div class="relative text-white font-bold flex flex-nowrap items-end">
                 <span class="text-[30px] pb-2 pr-1 font-sgr">S/</span>
                 <span class="font-sgr text-[80px] leading-none">50.</span>
                 <span class="text-[38px] pb-2 font-sgr leading-none mb-1">00</span>
-                <p
-                  class="absolute top-[-4px] lg:top-[4px] text-[11px] font-medium text-[#12215A] left-[-10px]"
-                >
+                <p class="absolute top-[-4px] lg:top-[4px] text-[11px] font-medium text-[#12215A] left-[-10px]">
                   Desde
                 </p>
-                <p
-                  class="absolute bottom-[-5px] text-[11px] font-medium text-[#12215A] right-[20px]"
-                >
+                <p class="absolute bottom-[-5px] text-[11px] font-medium text-[#12215A] right-[20px]">
                   por persona
                 </p>
               </div>
             </div>
-            <div class="w-full text-center mt-[10px] md:mt-0 pb-4">
-              <p
-                class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none"
-              >
-              Paseos costeros en bahía con avistamiento
-              de aves marinas y nado con tortugas
-              </p>
-              <p
-                class="text-[#12215A] font-normal md:text-[14px] lg:text-[18px] leading-none mt-4"
-              >
-                Disfruta de nadar con tortugas
-              </p>
+            <div class="flex flex-col items-end justify-end">
+              <button
+                class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]">
+                RESERVAR
+              </button>
             </div>
-            <div class="flex justify-between md:justify-end w-full md:w-fit">
-              <div class="flex md:hidden items-center justify-center pl-5">
-                <div class="relative text-white font-bold flex flex-nowrap items-end">
-                  <span class="text-[30px] pb-2 pr-1 font-sgr">S/</span>
-                  <span class="font-sgr text-[80px] leading-none">50.</span>
-                  <span class="text-[38px] pb-2 font-sgr leading-none mb-1">00</span>
-                  <p
-                    class="absolute top-[-4px] lg:top-[4px] text-[11px] font-medium text-[#12215A] left-[-10px]"
-                  >
-                    Desde
-                  </p>
-                  <p
-                    class="absolute bottom-[-5px] text-[11px] font-medium text-[#12215A] right-[20px]"
-                  >
-                    por persona
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col items-end justify-end">
-                <button
-                  class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
-                >
-                  RESERVAR
-                </button>
-              </div>
-            </div>
-            <div
-                class="bg-[url('./img/descuento.svg')] bg-cover lg:w-[262px] flex justify-end mb-[20px] absolute bottom-[210px] md:bottom-[110px]"
-              >
-                <p
-                  class="text-white font-bold text-[26px] md:text-[30px] lg:text-[36px] pr-[20px] pl-[30px]"
-                >
-                  Descuento
-                </p>
-              </div>
+          </div>
+          <div
+            class="bg-[url('./img/descuento.svg')] bg-cover lg:w-[262px] flex justify-end mb-[20px] absolute bottom-[210px] md:bottom-[110px]">
+            <p class="text-white font-bold text-[26px] md:text-[30px] lg:text-[36px] pr-[20px] pl-[30px]">
+              Descuento
+            </p>
           </div>
         </div>
       </div>
-    </section>
-    <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
-      <div class="flex items-center justify-center mt-16">
-        <div
-          class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[20px] py-2 shadow-lg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
-          <p class="md:text-[18px] text-[#12215A] px-2 md:px-[20px] font-bold">
-            ¡Ver más paquetes y promociones!
+    </div>
+  </section>
+  <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+    <div class="flex items-center justify-center mt-16">
+      <div class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[20px] py-2 shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+        <p class="md:text-[18px] text-[#12215A] px-2 md:px-[20px] font-bold">
+          ¡Ver más paquetes y promociones!
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </div>
+    </div>
+    <div class="text-center mt-14">
+      <h3 class="font-bold text-[#12215A] text-[30px] lg:text-[50px] leading-none">
+        Paquetes <span class="gb-text text-white"><span class="relative">en promoción</span></span>
+      </h3>
+      <p class="text-[#12215A] text-[20px] lg:text-[30px] font-normal leading-none mt-6">
+        ¡Descuento especiales!
+      </p>
+    </div>
+    <div class="mt-6">
+      <swiper-container class="mySwiper p-2 pb-16 pt-4">
+        <swiper-slide>
+          <div
+            class="bg-[url('./img/promotion-1.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+            <div
+              class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]">
+              <div class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]">
+                <div>
+                  <div class="w-full text-center mt-[10px] md:mt-0">
+                    <p class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto">
+                      Alquiler de embarcaciones para eventos privados
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between mt-6">
+                  <div class="w-full ml-[30px]">
+                    <div class="relative text-white font-bold">
+                      <span class="text-[26px] font-sgr">S/</span>
+                      <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
+                      <span class="text-[20px] font-sgr leading-none">00</span>
+                      <p class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">
+                        Desde
+                      </p>
+                      <p class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]">
+                        por persona
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-end justify-end w-full">
+                    <button
+                      class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]">
+                      RESERVAR
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+            <div
+              class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]">
+              <div class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]">
+                <div>
+                  <div class="w-full text-center mt-[10px] md:mt-0">
+                    <p class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[80%] mx-auto">
+                      Paseos en bahía contemplando el atardecer de Máncora
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between mt-6">
+                  <div class="w-full ml-[30px]">
+                    <div class="relative text-white font-bold">
+                      <span class="text-[26px] font-sgr">S/</span>
+                      <span class="text-[40px] font-sgr lg:text-[60px] leading-none">50.</span>
+                      <span class="text-[20px] font-sgr leading-none">00</span>
+                      <p class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">
+                        Desde
+                      </p>
+                      <p class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]">
+                        por persona
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-end justify-end w-full">
+                    <button
+                      class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]">
+                      RESERVAR
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+            <div
+              class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]">
+              <div class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]">
+                <div>
+                  <div class="w-full text-center mt-[10px] md:mt-0">
+                    <p class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto">
+                      Alquiler de embarcaciones para eventos privados
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between mt-6">
+                  <div class="w-full ml-[30px]">
+                    <div class="relative text-white font-bold">
+                      <span class="text-[26px] font-sgr">S/</span>
+                      <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
+                      <span class="text-[20px] font-sgr leading-none">00</span>
+                      <p class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">
+                        Desde
+                      </p>
+                      <p class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]">
+                        por persona
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-end justify-end w-full">
+                    <button
+                      class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]">
+                      RESERVAR
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+            <div
+              class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]">
+              <div class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]">
+                <div>
+                  <div class="w-full text-center mt-[10px] md:mt-0">
+                    <p class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto">
+                      Alquiler de embarcaciones para eventos privados
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between mt-6">
+                  <div class="w-full ml-[30px]">
+                    <div class="relative text-white font-bold">
+                      <span class="text-[26px] font-sgr">S/</span>
+                      <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
+                      <span class="text-[20px] font-sgr leading-none">00</span>
+                      <p class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]">
+                        Desde
+                      </p>
+                      <p class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]">
+                        por persona
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-end justify-end w-full">
+                    <button
+                      class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]">
+                      RESERVAR
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-b from-[#00B2E4] to-[#12215a] mt-10 pb-10">
+    <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+      <div class="flex flex-col lg:flex-row items-center justify-between py-10">
+        <div class="flex flex-col lg:items-start mb-10 lg:mb-0">
+          <h3 class="text-white text-[36px] font-bold text-center leading-none mb-4">¡Vive<br>la experiencia!</h3>
+          <p class="text-white text-sm font-normal">¿Estás listo(a) para una gran aventura?</p>
+          <p class="text-white text-sm font-normal">Nosotros somos MARLIN ADVENTURES MÁNCORA y junto a nuestro equipo de
+            profesionales en turismo nos emociona invitarte a formar parte de todas las experiencias que tenemos para tí
+            en la hermosa ciudad de Máncora.
+          <p class="text-white text-sm font-normal">Desde el inolvidable nado con tortugas marinas, avistamiento de
+            impresionantes ballenas, pesca en alta mar ¡Y mucho más!</p>
+          <p class="text-white font-normal text-sm mt-3">¡Ven y vive una experiencia única e inolvidable con nosotros!
           </p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-4 h-4 stroke-[#2E3A59] stroke-[3px]"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
+        </div>
+        <div>
+          <img src="./img/exp.png" alt="">
         </div>
       </div>
-      <div class="text-center mt-14">
-        <h3 class="font-bold text-[#12215A] text-[30px] lg:text-[50px] leading-none">
-          Paquetes <span class="gb-text text-white"><span class="relative">en promoción</span></span>
+      <div class="flex items-center justify-center pt-10 pb-20">
+        <button class="flex items-center justify-center bg-white rounded-full text-center px-[40px] py-2 shadow-md">
+          <p class="font-bold text-[#12215A] text-[18px]">¡Quiero reservar! </p>
+        </button>
+      </div>
+      <div class="text-center mt-[30px] mb-10">
+        <h3 class="font-bold text-white text-[30px] lg:text-[50px] leading-none">
+          ¿Cuál será nuestra próxima aventura?
         </h3>
-        <p class="text-[#12215A] text-[20px] lg:text-[30px] font-normal leading-none mt-6">
-          ¡Descuento especiales!
+        <p class="text-white text-[20px] lg:text-[30px] font-normal leading-none mt-4">
+          Conoce nuestros <span class="gb-text text-white"><span class="relative font-bold">tours guiados</span></span>
         </p>
       </div>
       <div class="mt-6">
-        <swiper-container
-          class="mySwiper p-2 pb-16 pt-4"
-        >
-          <swiper-slide>
-            <div
-              class="bg-[url('./img/promotion-1.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
-            >
+        <div class="swiper mySwiper2 pb-12">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
+                <img class="round-[20px]" src="./img/tours-1.png" alt="">
+              </div>
               <div
-                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]"
-              >
-                <div
-                  class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
-                >
+                class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
+                <h4 class="text-[#606060] font-bold leading-none mb-2">Avistamiento de ballenas y nado con tortugas.
+                </h4>
+                <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
+                <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
+                  <p class="text-white text-sm">Cupos límitados</p>
+                </div>
+                <div class="mb-4">
+                  <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
+                  <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
+                </div>
+                <div class="flex items-start justify-between">
                   <div>
-                    <div class="w-full text-center mt-[10px] md:mt-0">
-                      <p
-                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto"
-                      >
-                      Alquiler de embarcaciones para eventos privados
-                      </p>
-                    </div>
+                    <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/40.00</p>
+                    <p class="text-xs text-[#606060]">por persona</p>
                   </div>
-                  <div class="flex items-center justify-between mt-6">
-                    <div class="w-full ml-[30px]">
-                      <div class="relative text-white font-bold">
-                        <span class="text-[26px] font-sgr">S/</span>
-                        <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
-                        <span class="text-[20px] font-sgr leading-none">00</span>
-                        <p
-                          class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
-                        >
-                          Desde
-                        </p>
-                        <p
-                          class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]"
-                        >
-                          por persona
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex flex-col items-end justify-end w-full">
-                      <button
-                        class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
-                      >
-                        RESERVAR
-                      </button>
-                    </div>
-                  </div>
+                  <button
+                    class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
                 </div>
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div
-              class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
-            >
+            <div class="swiper-slide">
+              <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
+                <img class="round-[20px]" src="./img/tours-2.png" alt="">
+              </div>
               <div
-                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]"
-              >
-                <div
-                  class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
-                >
+                class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
+                <h4 class="text-[#606060] font-bold leading-none mb-2">Paseos costeros en bahía con avistamiento de aves
+                  marinas y nado con tortugas.</h4>
+                <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
+                <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
+                  <p class="text-white text-sm">Cupos límitados</p>
+                </div>
+                <div class="mb-4">
+                  <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
+                  <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
+                </div>
+                <div class="flex items-start justify-between">
                   <div>
-                    <div class="w-full text-center mt-[10px] md:mt-0">
-                      <p
-                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[80%] mx-auto"
-                      >
-                        Paseos en bahía contemplando el atardecer de Máncora
-                      </p>
-                    </div>
+                    <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/50.00</p>
+                    <p class="text-xs text-[#606060]">por persona</p>
                   </div>
-                  <div class="flex items-center justify-between mt-6">
-                    <div class="w-full ml-[30px]">
-                      <div class="relative text-white font-bold">
-                        <span class="text-[26px] font-sgr">S/</span>
-                        <span class="text-[40px] font-sgr lg:text-[60px] leading-none">50.</span>
-                        <span class="text-[20px] font-sgr leading-none">00</span>
-                        <p
-                          class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
-                        >
-                          Desde
-                        </p>
-                        <p
-                          class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]"
-                        >
-                          por persona
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex flex-col items-end justify-end w-full">
-                      <button
-                        class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
-                      >
-                        RESERVAR
-                      </button>
-                    </div>
-                  </div>
+                  <button
+                    class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
                 </div>
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div
-              class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
-            >
+            <div class="swiper-slide">
+              <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
+                <img class="round-[20px]" src="./img/tours-3.png" alt="">
+              </div>
               <div
-                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]"
-              >
-                <div
-                  class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
-                >
+                class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
+                <h4 class="text-[#606060] font-bold leading-none mb-2">Paseos costeros en bahía de Máncora con buceo de
+                  superficie.</h4>
+                <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
+                <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
+                  <p class="text-white text-sm">Cupos límitados</p>
+                </div>
+                <div class="mb-4">
+                  <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
+                  <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
+                </div>
+                <div class="flex items-start justify-between">
                   <div>
-                    <div class="w-full text-center mt-[10px] md:mt-0">
-                      <p
-                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto"
-                      >
-                      Alquiler de embarcaciones para eventos privados
-                      </p>
-                    </div>
+                    <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/60.00</p>
+                    <p class="text-xs text-[#606060]">por persona</p>
                   </div>
-                  <div class="flex items-center justify-between mt-6">
-                    <div class="w-full ml-[30px]">
-                      <div class="relative text-white font-bold">
-                        <span class="text-[26px] font-sgr">S/</span>
-                        <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
-                        <span class="text-[20px] font-sgr leading-none">00</span>
-                        <p
-                          class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
-                        >
-                          Desde
-                        </p>
-                        <p
-                          class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]"
-                        >
-                          por persona
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex flex-col items-end justify-end w-full">
-                      <button
-                        class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
-                      >
-                        RESERVAR
-                      </button>
-                    </div>
-                  </div>
+                  <button
+                    class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
                 </div>
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div
-              class="bg-[url('./img/promotion-2.png')] h-[407px] bg-cover bg-center rounded-[17px] relative border-white border-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"
-            >
+            <div class="swiper-slide">
+              <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
+                <img class="round-[20px]" src="./img/tours-1.png" alt="">
+              </div>
               <div
-                class="absolute bg-[url('./img/promotion-bg.png')] md:bg-[url('./img/promotion-bg.png')] bg-cover h-[180px] md:h-[210px] w-full bottom-0 rounded-[17px]"
-              >
-                <div
-                  class="flex flex-col h-full justify-end pb-[15px] md:pb-[20px]"
-                >
+                class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
+                <h4 class="text-[#606060] font-bold leading-none mb-2">Paseos costeros en bahía de Máncora con buceo de
+                  superficie.</h4>
+                <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
+                <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
+                  <p class="text-white text-sm">Cupos límitados</p>
+                </div>
+                <div class="mb-4">
+                  <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
+                  <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
+                </div>
+                <div class="flex items-start justify-between">
                   <div>
-                    <div class="w-full text-center mt-[10px] md:mt-0">
-                      <p
-                        class="text-[#12215A] font-bold md:text-[18px] lg:text-[21px] leading-none w-[70%] mx-auto"
-                      >
-                      Alquiler de embarcaciones para eventos privados
-                      </p>
-                    </div>
+                    <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/60.00</p>
+                    <p class="text-xs text-[#606060]">por persona</p>
                   </div>
-                  <div class="flex items-center justify-between mt-6">
-                    <div class="w-full ml-[30px]">
-                      <div class="relative text-white font-bold">
-                        <span class="text-[26px] font-sgr">S/</span>
-                        <span class="text-[40px] font-sgr lg:text-[60px] leading-none">60.</span>
-                        <span class="text-[20px] font-sgr leading-none">00</span>
-                        <p
-                          class="absolute top-[-4px] lg:top-0 text-[11px] font-normal text-[#12215A] left-[-10px]"
-                        >
-                          Desde
-                        </p>
-                        <p
-                          class="absolute bottom-[-5px] text-[11px] font-normal text-[#12215A] left-[40px]"
-                        >
-                          por persona
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex flex-col items-end justify-end w-full">
-                      <button
-                        class="bg-white py-[8px] px-[30px] rounded-[12px] font-bold text-[#12215A] md:text-[18px] lg:text-[21px] mr-[20px]"
-                      >
-                        RESERVAR
-                      </button>
-                    </div>
-                  </div>
+                  <button
+                    class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
                 </div>
               </div>
-            </div>
-          </swiper-slide>
-        </swiper-container>
-      </div>
-    </section>
-
-    <section class="bg-gradient-to-b from-[#00B2E4] to-[#12215a] mt-10 pb-10">
-        <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
-          <div class="flex flex-col lg:flex-row items-center justify-between py-10">
-            <div class="flex flex-col lg:items-start mb-10 lg:mb-0">
-              <h3 class="text-white text-[36px] font-bold text-center leading-none mb-4">¡Vive<br>la experiencia!</h3>
-              <p class="text-white text-sm font-normal">¿Estás listo(a) para una gran aventura?</p>
-              <p class="text-white text-sm font-normal">Nosotros somos MARLIN ADVENTURES MÁNCORA y junto a nuestro equipo de profesionales en turismo nos emociona invitarte a formar parte de todas las experiencias que tenemos para tí en la hermosa ciudad de Máncora.
-              <p class="text-white text-sm font-normal">Desde el inolvidable nado con tortugas marinas, avistamiento de impresionantes ballenas, pesca en alta mar ¡Y mucho más!</p>
-              <p class="text-white font-normal text-sm mt-3">¡Ven y vive una experiencia única e inolvidable con nosotros!</p>
-            </div>
-            <div>
-              <img src="./img/exp.png" alt="">
             </div>
           </div>
-          <div class="flex items-center justify-center pt-10 pb-20">
-            <button class="flex items-center justify-center bg-white rounded-full text-center px-[40px] py-2 shadow-md">
-              <p class="font-bold text-[#12215A] text-[18px]">¡Quiero reservar! </p>
-            </button>
-          </div>
-          <div class="text-center mt-[30px] mb-10">
-            <h3 class="font-bold text-white text-[30px] lg:text-[50px] leading-none">
-              ¿Cuál será nuestra próxima aventura?
-            </h3>
-            <p class="text-white text-[20px] lg:text-[30px] font-normal leading-none mt-4">
-              Conoce nuestros <span class="gb-text text-white"><span class="relative font-bold">tours guiados</span></span>
-            </p>
-          </div>
-          <div class="mt-6">
-            <div class="swiper mySwiper2 pb-12">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
-                    <img class="round-[20px]" src="./img/tours-1.png" alt="">
-                  </div>
-                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
-                    <h4 class="text-[#606060] font-bold leading-none mb-2">Avistamiento de ballenas y nado con tortugas.</h4>
-                    <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
-                    <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
-                      <p class="text-white text-sm">Cupos límitados</p>
-                    </div>
-                    <div class="mb-4">
-                      <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
-                      <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
-                    </div>
-                    <div class="flex items-start justify-between">
-                      <div>
-                        <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/40.00</p>
-                        <p class="text-xs text-[#606060]">por persona</p>
-                      </div>
-                      <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
-                    <img class="round-[20px]" src="./img/tours-2.png" alt="">
-                  </div>
-                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
-                    <h4 class="text-[#606060] font-bold leading-none mb-2">Paseos costeros en bahía con avistamiento de aves marinas y nado con tortugas.</h4>
-                    <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
-                    <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
-                      <p class="text-white text-sm">Cupos límitados</p>
-                    </div>
-                    <div class="mb-4">
-                      <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
-                      <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
-                    </div>
-                    <div class="flex items-start justify-between">
-                      <div>
-                        <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/50.00</p>
-                        <p class="text-xs text-[#606060]">por persona</p>
-                      </div>
-                      <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
-                    <img class="round-[20px]" src="./img/tours-3.png" alt="">
-                  </div>
-                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
-                    <h4 class="text-[#606060] font-bold leading-none mb-2">Paseos costeros en bahía de Máncora con buceo de superficie.</h4>
-                    <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
-                    <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
-                      <p class="text-white text-sm">Cupos límitados</p>
-                    </div>
-                    <div class="mb-4">
-                      <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
-                      <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
-                    </div>
-                    <div class="flex items-start justify-between">
-                      <div>
-                        <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/60.00</p>
-                        <p class="text-xs text-[#606060]">por persona</p>
-                      </div>
-                      <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="border-[6px] border-white rounded-[30px] drop-shadow-lg">
-                    <img class="round-[20px]" src="./img/tours-1.png" alt="">
-                  </div>
-                  <div class="bg-white pt-[30px] pb-[10px] px-[15px] w-[90%] mx-auto mt-[-10px] rounded-b-[20px] md:h-[262px]">
-                    <h4 class="text-[#606060] font-bold leading-none mb-2">Paseos costeros en bahía de Máncora con buceo de superficie.</h4>
-                    <p class="text-sm text-[#606060] mb-2">Aprox. 2.5 horas.</p>
-                    <div class="bg-[#FA503F] px-[20px] py-[4px] rounded-[10px] w-fit mb-2">
-                      <p class="text-white text-sm">Cupos límitados</p>
-                    </div>
-                    <div class="mb-4">
-                      <p class="text-[#FA503F] text-xs mb-1">*No incluye:</p>
-                      <p class="text-[#FA503F] text-xs">Comidas y bebidas a bordo.</p>
-                    </div>
-                    <div class="flex items-start justify-between">
-                      <div>
-                        <p class="text-[30px] font-sgr font-bold text-[#12215A] leading-none">S/60.00</p>
-                        <p class="text-xs text-[#606060]">por persona</p>
-                      </div>
-                      <button class="flex items-center justify-center text-white font-bold bg-[#00B2E4] rounded-full text-center px-[20px] py-1">RESERVAR</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
-      <div class="mt-10">
-        <img class="w-full" src="./img/video.jpg" alt="">
-        <div class="flex items-center justify-center mt-10">
-          <button class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[40px] py-2 shadow-md">
-            <p class="font-bold text-[18px]">¡Quiero reservar! </p>
-          </button>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="border-b-[30px] border-[#11CCC7] mt-10">
-      <div
-        class="lg:w-[1024px] mx-auto px-[15px] lg:px-0 border-t-[3px] border-[#12215A]"
-      >
-        <div class="flex flex-col-reverse md:flex-row items-center py-[30px]">
-          <div class="md:w-[35%] justify-center flex-col flex items-center">
-            <img src="./img/logo-color.svg" alt="" />
-            <div class="flex items-center justify-between pt-6 w-[120px]">
-              <a href="">
-                <img src="./img/fb.svg" alt="" />
-              </a>
-              <a href="">
-                <img src="./img/inst.svg" alt="" />
-              </a>
-              <a href="">
-                <img src="./img/wsp.svg" alt="" />
-              </a>
-            </div>
+  <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+    <div class="mt-10">
+      <img class="w-full" src="./img/video.jpg" alt="">
+      <div class="flex items-center justify-center mt-10">
+        <button class="flex items-center justify-center bg-[#11CCC7] rounded-full text-center px-[40px] py-2 shadow-md">
+          <p class="font-bold text-[18px]">¡Quiero reservar! </p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-b-[30px] border-[#11CCC7] mt-10">
+    <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0 border-t-[3px] border-[#12215A]">
+      <div class="flex flex-col-reverse md:flex-row items-center py-[30px]">
+        <div class="md:w-[35%] justify-center flex-col flex items-center">
+          <img src="./img/logo-color.svg" alt="" />
+          <div class="flex items-center justify-between pt-6 w-[120px]">
+            <a href="">
+              <img src="./img/fb.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./img/inst.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./img/wsp.svg" alt="" />
+            </a>
           </div>
-          <div class="md:w-[75%] mb-[20px] md:mb-0">
-            <div class="flex gap-10">
-              <div class="flex flex-col text-[18px] w-full">
-                <h3 class="text-[#00B2E4] font-bold">Inicio</h3>
-                <a class="text-[#12215A]" href="">Sobre nosotros</a>
-                <a class="text-[#12215A]" href="">Tours guiados</a>
-                <a class="text-[#12215A]" href="">Paquetes y promociones</a>
-                <a class="text-[#12215A]" href="">Contáctanos</a>
+        </div>
+        <div class="md:w-[75%] mb-[20px] md:mb-0">
+          <div class="flex gap-10">
+            <div class="flex flex-col text-[18px] w-full">
+              <h3 class="text-[#00B2E4] font-bold">Inicio</h3>
+              <a class="text-[#12215A]" href="">Sobre nosotros</a>
+              <a class="text-[#12215A]" href="">Tours guiados</a>
+              <a class="text-[#12215A]" href="">Paquetes y promociones</a>
+              <a class="text-[#12215A]" href="">Contáctanos</a>
+            </div>
+            <div class="flex flex-col w-full">
+              <div class="flex flex-col">
+                <h3 class="text-[#00B2E4] font-bold">Oficina</h3>
+                <p>PJ A00 S/N</p>
+                <p>Barrio industrial - Máncora</p>
               </div>
-              <div class="flex flex-col w-full">
-                <div class="flex flex-col">
-                  <h3 class="text-[#00B2E4] font-bold">Oficina</h3>
-                  <p>PJ A00 S/N</p>
-                  <p>Barrio industrial - Máncora</p>
-                </div>
-                <div class="flex flex-col">
-                  <h3 class="text-[#00B2E4] font-bold">Reservas</h3>
-                  <p>957 561 266</p>
-                </div>
+              <div class="flex flex-col">
+                <h3 class="text-[#00B2E4] font-bold">Reservas</h3>
+                <p>957 561 266</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  <script>
-    const swiperEl = document.querySelector("swiper-container");
-    Object.assign(swiperEl, {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        clickable: true,
+<script>
+  const swiperEl = document.querySelector("swiper-container");
+  Object.assign(swiperEl, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      clickable: true,
+    },
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
-      breakpoints: {
-        "@0.00": {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        "@0.75": {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        "@1.00": {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        "@1.50": {
-          slidesPerView: 2,
-          spaceBetween: 50,
-        },
+      "@0.75": {
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
-    });
-    swiperEl.initialize();
+      "@1.00": {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      "@1.50": {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+    },
+  });
+  swiperEl.initialize();
 
-    var swiper = new Swiper(".mySwiper2", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+  var swiper = new Swiper(".mySwiper2", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 10,
       },
-      breakpoints: {
-        "@0.00": {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        "@0.75": {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        "@1.00": {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-        "@1.50": {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
+      "@0.75": {
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
-    });
-  </script>
+      "@1.00": {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      "@1.50": {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
+
 </html>

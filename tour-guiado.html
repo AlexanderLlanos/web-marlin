@@ -16,9 +16,9 @@
 </head>
 <style>
     body {
-      font-family: 'Montserrat', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
-    
+
     .banner-home {
         background-image: url(./img/banner-tour.jpg);
         background-position: center;
@@ -67,9 +67,9 @@
 </style>
 
 <body>
-    <section class="banner-home">
-        <header class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
-            <div class="flex items-center justify-between pt-8">
+    <header class="absolute top-0 left-0 right-0 w-full pt-6 z-10">
+        <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+            <div class="flex items-center justify-between">
                 <div>
                     <img src="./img/logo.svg" alt="" />
                 </div>
@@ -81,7 +81,7 @@
                     </svg>
                 </div>
                 <!-- add class active mobile -->
-                <nav class="nav items-center gap-6">
+                <nav class="active nav items-center gap-6">
                     <div class="flex lg:hidden items-end justify-end mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="stroke-[#12215A] w-8 h-8 stroke-2">
@@ -117,32 +117,42 @@
                     </div>
                 </nav>
             </div>
-        </header>
-        <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
-            <div class="lg:flex lg:items-start lg:justify-center h-[608px] w-full pt-16">
-                <div class="lg:w-[55%]">
-                    <span class="text-white mb-2">Tour guiado</span>
-                    <h2 class="lg:text-[50.8px] text-[30px] font-bold text-white leading-10 lg:leading-[50.8px]">
-                        Avistamiento de ballenas y nado con
-                        tortugas.</h2>
-                </div>
-                <div class="lg:ml-[55px] lg:w-[45%] text-white">
-                    <p class="font-medium text-sm mb-[17px]">Descripción del servicio</p>
-                    <p class="text-[18.81px] text-medium mb-1">Información General</p>
-                    <p class="font-bold mb-1">Disponibilidad</p>
-                    <ul class="list-disc pl-4 text-sm mb-3">
-                        <li>De Julio a Octubre</li>
-                        <li>Salidas diarias de Lunes a Domingo</li>
-                        <li>01 servicio diario</li>
-                    </ul>
-                    <p class="font-bold text-sm">Horarios de servicio</p>
-                    <p class="mb-2 text-sm">De 7:00 a.m. a 9:30 a.m.</p>
-                    <p class="font-bold text-sm">Duración de 2.5 - 3 Horas</p>
-                    <p class="font-bold text-sm">Lugar y hora de embarque: </p>
-                    <p>Muelle de Máncora a las 6:30 a.m.</p>
+        </div>
+    </header>
+    <section class="rounded-b-[20px] relative h-[608px]">
+        <img src="./img/banner-tour.jpg" alt="" class="h-full w-full object-cover">
+        <div
+            class="absolute top-0 left-0 right-0 flex justify-center items-center lg:w-[1024px] h-[608px] mx-auto px-[15px] lg:px-0">
+            <div class="pt-40">
+                <div class="flex items-center justify-center flex-col">
+                    <div class="lg:flex lg:items-start lg:justify-center h-[608px] w-full pt-40">
+                        <div class="lg:w-[55%]">
+                            <span class="text-white mb-2">Tour guiado</span>
+                            <h2
+                                class="lg:text-[50.8px] text-[30px] font-bold text-white leading-10 lg:leading-[50.8px]">
+                                Avistamiento de ballenas y nado con
+                                tortugas.</h2>
+                        </div>
+                        <div class="lg:ml-[55px] lg:w-[45%] text-white">
+                            <p class="font-medium text-sm mb-[17px]">Descripción del servicio</p>
+                            <p class="text-[18.81px] text-medium mb-1">Información General</p>
+                            <p class="font-bold mb-1">Disponibilidad</p>
+                            <ul class="list-disc pl-4 text-sm mb-3">
+                                <li>De Julio a Octubre</li>
+                                <li>Salidas diarias de Lunes a Domingo</li>
+                                <li>01 servicio diario</li>
+                            </ul>
+                            <p class="font-bold text-sm">Horarios de servicio</p>
+                            <p class="mb-2 text-sm">De 7:00 a.m. a 9:30 a.m.</p>
+                            <p class="font-bold text-sm">Duración de 2.5 - 3 Horas</p>
+                            <p class="font-bold text-sm">Lugar y hora de embarque: </p>
+                            <p>Muelle de Máncora a las 6:30 a.m.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </section>
     <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
         <div class="lg:flex items-center justify-between mt-6 px-10">
@@ -386,49 +396,47 @@
         </div>
     </section>
     <footer class="border-b-[30px] border-[#11CCC7] mt-10">
-        <div
-          class="lg:w-[1024px] mx-auto px-[15px] lg:px-0 border-t-[3px] border-[#12215A]"
-        >
-          <div class="flex flex-col-reverse md:flex-row items-center py-[30px]">
-            <div class="md:w-[35%] justify-center flex-col flex items-center">
-              <img src="./img/logo-color.svg" alt="" />
-              <div class="flex items-center justify-between pt-6 w-[120px]">
-                <a href="">
-                  <img src="./img/fb.svg" alt="" />
-                </a>
-                <a href="">
-                  <img src="./img/inst.svg" alt="" />
-                </a>
-                <a href="">
-                  <img src="./img/wsp.svg" alt="" />
-                </a>
-              </div>
-            </div>
-            <div class="md:w-[75%] mb-[20px] md:mb-0">
-              <div class="flex gap-10">
-                <div class="flex flex-col text-[18px] w-full">
-                  <h3 class="text-[#00B2E4] font-bold">Inicio</h3>
-                  <a class="text-[#12215A]" href="">Sobre nosotros</a>
-                  <a class="text-[#12215A]" href="">Tours guiados</a>
-                  <a class="text-[#12215A]" href="">Paquetes y promociones</a>
-                  <a class="text-[#12215A]" href="">Contáctanos</a>
+        <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0 border-t-[3px] border-[#12215A]">
+            <div class="flex flex-col-reverse md:flex-row items-center py-[30px]">
+                <div class="md:w-[35%] justify-center flex-col flex items-center">
+                    <img src="./img/logo-color.svg" alt="" />
+                    <div class="flex items-center justify-between pt-6 w-[120px]">
+                        <a href="">
+                            <img src="./img/fb.svg" alt="" />
+                        </a>
+                        <a href="">
+                            <img src="./img/inst.svg" alt="" />
+                        </a>
+                        <a href="">
+                            <img src="./img/wsp.svg" alt="" />
+                        </a>
+                    </div>
                 </div>
-                <div class="flex flex-col w-full">
-                  <div class="flex flex-col">
-                    <h3 class="text-[#00B2E4] font-bold">Oficina</h3>
-                    <p>PJ A00 S/N</p>
-                    <p>Barrio industrial - Máncora</p>
-                  </div>
-                  <div class="flex flex-col">
-                    <h3 class="text-[#00B2E4] font-bold">Reservas</h3>
-                    <p>957 561 266</p>
-                  </div>
+                <div class="md:w-[75%] mb-[20px] md:mb-0">
+                    <div class="flex gap-10">
+                        <div class="flex flex-col text-[18px] w-full">
+                            <h3 class="text-[#00B2E4] font-bold">Inicio</h3>
+                            <a class="text-[#12215A]" href="">Sobre nosotros</a>
+                            <a class="text-[#12215A]" href="">Tours guiados</a>
+                            <a class="text-[#12215A]" href="">Paquetes y promociones</a>
+                            <a class="text-[#12215A]" href="">Contáctanos</a>
+                        </div>
+                        <div class="flex flex-col w-full">
+                            <div class="flex flex-col">
+                                <h3 class="text-[#00B2E4] font-bold">Oficina</h3>
+                                <p>PJ A00 S/N</p>
+                                <p>Barrio industrial - Máncora</p>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="text-[#00B2E4] font-bold">Reservas</h3>
+                                <p>957 561 266</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </footer>
+    </footer>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>

@@ -67,64 +67,69 @@
 </style>
 
 <body>
-  <header class=" bg-black w-full px-16 py-6">
-    <div class="flex items-center justify-between">
-      <div>
-        <img src="./img/logo.svg" alt="" />
-      </div>
-      <div class="lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-8 h-8 stroke-white">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      </div>
-      <!-- add class active mobile -->
-      <nav class="nav items-center gap-6">
-        <div class="flex lg:hidden items-end justify-end mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="stroke-[#12215A] w-8 h-8 stroke-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+  <header class="absolute top-0 left-0 right-0 w-full pt-6 z-10">
+    <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+      <div class="flex items-center justify-between">
+        <div>
+          <img src="./img/logo.svg" alt="" />
+        </div>
+        <div class="lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-8 h-8 stroke-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </div>
-        <ul class="flex flex-col lg:flex-row lg:items-center gap-6 text-[#12215A] lg:text-white font-bold text-[18px]">
-          <li>
-            <a href="">Inicio</a>
-          </li>
-          <li>
-            <a href="">Sobre nosotros</a>
-          </li>
-          <li>
-            <a href="">Tours guiados</a>
-          </li>
-          <li>
-            <a href="">Paquetes y promociones</a>
-          </li>
-        </ul>
-        <div class="flex items-center gap-2 mt-10 lg:mt-0">
-          <a href="">
-            <img src="./img/en.svg" alt="" />
-          </a>
-          <a href="">
-            <img src="./img/es.svg" alt="" />
-          </a>
-          <button class="bg-[#11CCC7] lg:bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]">
-            Contáctanos
-          </button>
-        </div>
-      </nav>
+        <!-- add class active mobile -->
+        <nav class="active nav items-center gap-6">
+          <div class="flex lg:hidden items-end justify-end mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="stroke-[#12215A] w-8 h-8 stroke-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </div>
+          <ul class="flex flex-col lg:flex-row lg:items-center gap-6 text-[#12215A] lg:text-white font-bold text-[18px]">
+            <li>
+              <a href="">Inicio</a>
+            </li>
+            <li>
+              <a href="">Sobre nosotros</a>
+            </li>
+            <li>
+              <a href="">Tours guiados</a>
+            </li>
+            <li>
+              <a href="">Paquetes y promociones</a>
+            </li>
+          </ul>
+          <div class="flex items-center gap-2 mt-10 lg:mt-0">
+            <a href="">
+              <img src="./img/en.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="./img/es.svg" alt="" />
+            </a>
+            <button class="bg-[#11CCC7] lg:bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]">
+              Contáctanos
+            </button>
+          </div>
+        </nav>
+      </div>
     </div>
   </header>
   <section class="rounded-b-[20px] relative h-[608px]">
-    <img src="./img/banner-home.jpg" alt="" class="h-full w-full">
-    <div class="absolute bottom-[10%] md:left-[30%] lg:left-[40%] left-[10%]">
-      <div class="flex items-center justify-center flex-col">
-        <img src="./img/banner-text.svg" alt="" />
-        <button
-          class="bg-white py-[8px] px-[31px] rounded-full font-bold text-[#12215A] text-[15px] mt-[60px] shadow-white/30 shadow-lg">
-          ¡Ver más paquetes y promociones!
-        </button>
+    <img src="./img/banner-home.jpg" alt="" class="h-full w-full object-cover">
+    <div class="absolute top-0 left-0 right-0 flex justify-center items-center lg:w-[1024px] h-[608px] mx-auto px-[15px] lg:px-0">
+      <div class="pt-16">
+        <div class="flex items-center justify-center flex-col">
+          <img src="./img/banner-text.svg" alt="" />
+          <button
+            class="bg-white py-[8px] px-[31px] rounded-full font-bold text-[#12215A] text-[15px] mt-[60px] shadow-white/30 shadow-lg">
+            ¡Ver más paquetes y promociones!
+          </button>
+        </div>
       </div>
     </div>
+    
   </section>
   <section class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
     <div class="bg-[url('./img/box-descuento.jpg')] h-[407px] mt-10 bg-cover bg-center rounded-[17px] relative">

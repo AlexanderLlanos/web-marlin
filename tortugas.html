@@ -70,6 +70,57 @@
   </style>
 
   <body>
+    <header class="absolute top-0 left-0 right-0 w-full pt-6 z-10">
+      <div class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
+        <div class="flex items-center justify-between">
+          <div>
+            <img src="./img/logo.svg" alt="" />
+          </div>
+          <div class="lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-8 h-8 stroke-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </div>
+          <!-- add class active mobile -->
+          <nav class="active nav items-center gap-6">
+            <div class="flex lg:hidden items-end justify-end mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="stroke-[#12215A] w-8 h-8 stroke-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <ul
+              class="flex flex-col lg:flex-row lg:items-center gap-6 text-[#12215A] lg:text-white font-bold text-[18px]">
+              <li>
+                <a href="">Inicio</a>
+              </li>
+              <li>
+                <a href="">Sobre nosotros</a>
+              </li>
+              <li>
+                <a href="">Tours guiados</a>
+              </li>
+              <li>
+                <a href="">Paquetes y promociones</a>
+              </li>
+            </ul>
+            <div class="flex items-center gap-2 mt-10 lg:mt-0">
+              <a href="">
+                <img src="./img/en.svg" alt="" />
+              </a>
+              <a href="">
+                <img src="./img/es.svg" alt="" />
+              </a>
+              <button
+                class="bg-[#11CCC7] lg:bg-white py-[9px] px-[18px] rounded-full font-bold text-[#12215A] text-[15px]">
+                Contáctanos
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
     <section class="banner-home bg-[url('./img/banner-tour.jpg')]">
       <header class="lg:w-[1024px] mx-auto px-[15px] lg:px-0">
         <div class="flex items-center justify-between pt-8">
